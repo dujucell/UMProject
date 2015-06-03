@@ -12,9 +12,11 @@ namespace UMProjectWebsite.Business
 {
     public class FileManager : BusinessManager
     {
-        public void MapDirectoryPath()
+        public string MapDirectoryPath(string name)
         {
             IFileSystemSvc svcFileSystem = (IFileSystemSvc)this.getService(typeof(IFileSystemSvc).Name);
+            return svcFileSystem.MapDirectoryPath(name);
+
         }
     }
 }

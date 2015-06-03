@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-
 /// <summary>
-/// Summary description for IFileSystemSVC
+/// Summary description for IMatlabSvc
 /// </summary>
+
 namespace UMProjectWebsite.Service.Interface
 {
-    
-    public interface IFileSystemSvc : IService
+    public interface IMatlabSvc : IService
     {
-        public string MapDirectoryPath(string name); 
-        
-        
+        void MatlabExecute();
+
     }
 }

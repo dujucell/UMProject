@@ -6,7 +6,12 @@ using System.Web;
 /// <summary>
 /// Summary description for CustomDirectories
 /// </summary>
-public static class CustomDirectories
+/// 
+
+namespace UMProjectWebsite.Constants
 {
-    public static string MATLAB_WORKSPACE = "MATLab";
+    public static class CustomDirectories
+    {
+        public static string MATLAB_WORKSPACE = "MATLab";
+    }
 }
