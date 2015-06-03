@@ -20,5 +20,7 @@ public partial class _Default : System.Web.UI.Page
         // Display result 
         object[] res = result as object[];
 
+        Label1.Text = res[0] + " " + res[1];
+
     }
 }
