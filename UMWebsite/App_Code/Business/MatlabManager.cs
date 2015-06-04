@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using UMProjectWebsite.Service.Interface;
-/// <summary>
-/// Summary description for MatlabManager
-/// </summary>
-/// 
+using UMWebsite.Service.Interface;
 
-namespace UMProjectWebsite.Business
+
+namespace UMWebsite.Business
 {
     public class MatlabManager : BusinessManager
     {
@@ -17,5 +14,19 @@ namespace UMProjectWebsite.Business
             IMatlabSvc svcMatlab = (IMatlabSvc)this.getService(typeof(IMatlabSvc).Name);
             svcMatlab.MatlabExecute();
         }
+
+        public object MatlabExecuteComputeCost(int[,] X, int[,] y, int[,] theta)
+        {
+            IMatlabSvc svcMatlab = (IMatlabSvc)this.getService(typeof(IMatlabSvc).Name);
+            return svcMatlab.MatlabExecuteComputeCost(X, y, theta);
+        }
+
+        public object MatlabExecuteGradientDescent(int[,] X, int[,] y, int[,] theta, int alpha, int numInteraction)
+        {
+            IMatlabSvc svcMatlab = (IMatlabSvc)this.getService(typeof(IMatlabSvc).Name);
+            return svcMatlab.MatlabExecuteGradientDescent(X, y, theta, alpha, numInteraction);
+        }
     }
+
+   
 }

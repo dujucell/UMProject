@@ -7,13 +7,11 @@ using System.Web;
 /// <summary>
 /// Summary description for IFileSystemSVC
 /// </summary>
-namespace UMProjectWebsite.Service.Interface
+namespace UMWebsite.Service.Interface
 {
     
     public interface IFileSystemSvc : IService
     {
-        public string MapDirectoryPath(string name); 
-        
-        
+        string MapDirectoryPath(string name);   
     }
 }
