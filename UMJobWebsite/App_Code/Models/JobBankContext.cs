@@ -1,8 +1,8 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using UMWebsite.Models.Mapping;
+using UMJobWebsite.Models.Mapping;
 
-namespace UMWebsite.Models
+namespace UMJobWebsite.Models
 {
     public partial class JobBankContext : DbContext
     {
@@ -20,6 +20,7 @@ namespace UMWebsite.Models
         public DbSet<Compensation> Compensations { get; set; }
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Job> Jobs { get; set; }
+        public DbSet<Skill> Skills { get; set; }
         public DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,6 +29,7 @@ namespace UMWebsite.Models
             modelBuilder.Configurations.Add(new CompensationMap());
             modelBuilder.Configurations.Add(new EmployerMap());
             modelBuilder.Configurations.Add(new JobMap());
+            modelBuilder.Configurations.Add(new SkillMap());
             modelBuilder.Configurations.Add(new sysdiagramMap());
         }
     }

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 
-namespace UMWebsite.Models.Mapping
+namespace UMJobWebsite.Models.Mapping
 {
     public class EmployerMap : EntityTypeConfiguration<Employer>
     {

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UMWebsite.Service.Interface;
-using UMWebsite.Service;
+using UMJobWebsite.Service.Interface;
+using UMJobWebsite.Service;
 
-namespace UMWebsite.Business
+namespace UMJobWebsite.Business
 {
     public abstract class BusinessManager
     {

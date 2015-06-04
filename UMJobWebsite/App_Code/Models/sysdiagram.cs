@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UMWebsite.Models
+namespace UMJobWebsite.Models
 {
     public partial class sysdiagram
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 
-namespace UMWebsite.Constants
+namespace UMJobWebsite.Constants
 {
     public static class CustomDirectories
     {

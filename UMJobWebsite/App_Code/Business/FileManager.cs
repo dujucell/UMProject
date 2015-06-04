@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using UMWebsite.Service.Interface;
+using UMJobWebsite.Service.Interface;
 
 
-namespace UMWebsite.Business
+namespace UMJobWebsite.Business
 {
     public class FileManager : BusinessManager
     {

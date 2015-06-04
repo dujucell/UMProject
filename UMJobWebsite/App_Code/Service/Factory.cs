@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UMWebsite.Service.Interface;
-using UMWebsite.Service.Plugin;
-using UMWebsite.Exceptions.Service;
+using UMJobWebsite.Service.Interface;
+using UMJobWebsite.Service.Plugin;
+using UMJobWebsite.Exceptions.Service;
 using System.Collections.Specialized;
 using System.Configuration;
 
-namespace UMWebsite.Service
+namespace UMJobWebsite.Service
 {
     public class Factory
     {

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using UMWebsite.Service.Interface;
+using UMJobWebsite.Service.Interface;
 
 /// <summary>
 /// Summary description for FileSystemSvcImp
 /// </summary>
-namespace UMWebsite.Service.Plugin
+namespace UMJobWebsite.Service.Plugin
 {
     public class FileSystemSvcImpl : IFileSystemSvc
     {

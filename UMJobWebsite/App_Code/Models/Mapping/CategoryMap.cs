@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 
-namespace UMWebsite.Models.Mapping
+namespace UMJobWebsite.Models.Mapping
 {
     public class CategoryMap : EntityTypeConfiguration<Category>
     {
@@ -18,7 +18,7 @@ namespace UMWebsite.Models.Mapping
 
             this.Property(t => t.CategoryName)
                 .IsRequired()
-                .HasMaxLength(20);
+                .HasMaxLength(30);
 
             this.Property(t => t.CategoryDescription)
                 .HasMaxLength(100);
@@ -30,14 +30,14 @@ namespace UMWebsite.Models.Mapping
             this.Property(t => t.CategoryDescription).HasColumnName("CategoryDescription");
 
             // Relationships
-            this.HasMany(t => t.Recruitees)
+            this.HasMany(t => t.Jobs)
                 .WithMany(t => t.Categories)
                 .Map(m =>
-                {
-                    m.ToTable("RecruiteeCategory");
-                    m.MapLeftKey("CategoryId");
-                    m.MapRightKey("RecruiteeId");
-                });
+                    {
+                        m.ToTable("JobCategory");
+                        m.MapLeftKey("CategoryId");
+                        m.MapRightKey("JobId");
+                    });
 
 
         }

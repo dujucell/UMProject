@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using UMWebsite.Models;
+using UMJobWebsite.Models;
 using System.Runtime.Serialization;
 
-namespace UMWebsite.DomainDTO
+namespace UMJobWebsite.DomainDTO
 {
     [DataContract]
     public class CategoryDto

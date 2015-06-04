@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-namespace UMWebsite.Models
+namespace UMJobWebsite.Models
 {
     public class Job
     {
         public Job()
         {
             this.Categories = new List<Category>();
+	    this.Skills = new List<Skill>();
         }
 
         public System.Guid JobId { get; set; }
@@ -21,6 +22,7 @@ namespace UMWebsite.Models
         public virtual Compensation Compensation { get; set; }
         public virtual Employer Employer { get; set; }
         public virtual ICollection<Category> Categories { get; set; }
+	public virtual ICollection<Skill> Skills { get; set; }
 
         public static Job CreateJob(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId, 
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UMWebsite.Exceptions.Business
+namespace UMJobWebsite.Exceptions.Business
 {
     public class BusinessValidationException : Exception
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using UMWebsite.Models;
+using UMJobWebsite.Models;
 
-namespace UMWebsite.DomainDTO
+namespace UMJobWebsite.DomainDTO
 {
     [DataContract]
     public class CompensationDto

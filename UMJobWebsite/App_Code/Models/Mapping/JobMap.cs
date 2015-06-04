@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 
-namespace UMWebsite.Models.Mapping
+namespace UMJobWebsite.Models.Mapping
 {
     public class JobMap : EntityTypeConfiguration<Job>
     {
@@ -39,6 +39,15 @@ namespace UMWebsite.Models.Mapping
             this.Property(t => t.JobCompensationValue).HasColumnName("JobCompensationValue");
 
             // Relationships
+            this.HasMany(t => t.Skills)
+                .WithMany(t => t.Jobs)
+                .Map(m =>
+                    {
+                        m.ToTable("JobSkill");
+                        m.MapLeftKey("JobId");
+                        m.MapRightKey("SkillId");
+                    });
+
             this.HasRequired(t => t.Compensation)
                 .WithMany(t => t.Jobs)
                 .HasForeignKey(d => d.CompensationId);

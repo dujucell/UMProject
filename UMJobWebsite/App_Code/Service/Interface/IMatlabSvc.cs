@@ -7,7 +7,7 @@ using System.Web;
 /// Summary description for IMatlabSvc
 /// </summary>
 
-namespace UMWebsite.Service.Interface
+namespace UMJobWebsite.Service.Interface
 {
     public interface IMatlabSvc : IService
     {
