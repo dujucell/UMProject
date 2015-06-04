@@ -7,7 +7,7 @@ using System.Web;
 /// <summary>
 /// Summary description for IFileSystemSVC
 /// </summary>
-namespace UMProjectWebsite.Service.Interface
+namespace UMPWebsite.Service.Interface
 {
     
     public interface IFileSystemSvc : IService

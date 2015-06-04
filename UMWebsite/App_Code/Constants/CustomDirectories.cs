@@ -8,7 +8,7 @@ using System.Web;
 /// </summary>
 /// 
 
-namespace UMProjectWebsite.Constants
+namespace UMWebsite.Constants
 {
     public static class CustomDirectories
     {

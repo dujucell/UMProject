@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using UMProjectWebsite.Service.Interface;
+using UMWebsite.Service.Interface;
 
 /// <summary>
 /// Summary description for FactoryManager
 /// </summary>
 
-namespace UMProjectWebsite.Business
+namespace UMWebsite.Business
 {
     public class FileManager : BusinessManager
     {

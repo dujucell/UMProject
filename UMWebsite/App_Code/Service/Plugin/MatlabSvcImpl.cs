@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using UMProjectWebsite.Service.Interface;
+using UMWebsite.Service.Interface;
 using MLApp;
-using UMProjectWebsite.Business;
+using UMWebsite.Business;
 
 /// <summary>
 /// Summary description for MatlabSvcImpl
 /// </summary>
 /// 
-namespace UMProjectWebsite.Service.Plugin
+namespace UMWebsite.Service.Plugin
 {
     public class MatlabSvcImpl : IMatlabSvc
     {

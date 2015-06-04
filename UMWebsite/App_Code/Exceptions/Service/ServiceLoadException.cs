@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UMProjectWebsite.Exceptions.Service
+namespace UMWebsite.Exceptions.Service
 {
     public class ServiceLoadException : Exception
     {
