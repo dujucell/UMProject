@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using UMWebsite.Models;
 using System.Runtime.Serialization;
+using UMWebsite.Models;
 
 namespace UMWebsite.DomainDTO
 {
