@@ -4,9 +4,6 @@ using System.Linq;
 using System.Web;
 using UMWebsite.Service.Interface;
 
-/// <summary>
-/// Summary description for FactoryManager
-/// </summary>
 
 namespace UMWebsite.Business
 {

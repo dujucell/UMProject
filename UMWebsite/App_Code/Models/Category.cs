@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UMWebsite.Models
 {
-    public class Category
+    public partial class Category
     {
         public Category()
         {
@@ -15,15 +15,15 @@ namespace UMWebsite.Models
         public string CategoryDescription { get; set; }
         public virtual ICollection<Job> Jobs { get; set; }
 
-
-        public static Category createCategory(String CategoryId, String CategoryName)
+        public static Category createCategory(String CategoryId, String CategoryName, String CategoryDescription)
         {
             Category obj = new Category();
             obj.CategoryId = CategoryId;
             obj.CategoryName = CategoryName;
+            obj.CategoryDescription = CategoryDescription;
             return obj;
         }
 
     }
-}
 
+}

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MLApp;
+using UMWebsite.Business;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -21,6 +22,5 @@ public partial class _Default : System.Web.UI.Page
         object[] res = result as object[];
 
         Label1.Text = res[0] + " " + res[1];
-
     }
 }

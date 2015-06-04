@@ -18,7 +18,11 @@ namespace UMWebsite.Models.Mapping
 
             this.Property(t => t.CategoryName)
                 .IsRequired()
+<<<<<<< HEAD
                 .HasMaxLength(30);
+=======
+                .HasMaxLength(20);
+>>>>>>> origin/master
 
             this.Property(t => t.CategoryDescription)
                 .HasMaxLength(100);
@@ -30,6 +34,7 @@ namespace UMWebsite.Models.Mapping
             this.Property(t => t.CategoryDescription).HasColumnName("CategoryDescription");
 
             // Relationships
+<<<<<<< HEAD
             this.HasMany(t => t.Jobs)
                 .WithMany(t => t.Categories)
                 .Map(m =>
@@ -37,6 +42,15 @@ namespace UMWebsite.Models.Mapping
                         m.ToTable("JobCategory");
                         m.MapLeftKey("CategoryId");
                         m.MapRightKey("JobId");
+=======
+            this.HasMany(t => t.Recruitees)
+                .WithMany(t => t.Categories)
+                .Map(m =>
+                    {
+                        m.ToTable("RecruiteeCategory");
+                        m.MapLeftKey("CategoryId");
+                        m.MapRightKey("RecruiteeId");
+>>>>>>> origin/master
                     });
 
 
