@@ -9,9 +9,9 @@ using UMWebsite.Service.Interface;
 /// </summary>
 namespace UMWebsite.Service.Plugin
 {
-    public class FileSystemSvcImp : IFileSystemSvc
+    public class FileSystemSvcImpl : IFileSystemSvc
     {
-        public FileSystemSvcImp()
+        public FileSystemSvcImpl()
         {
             //
             // TODO: Add constructor logic here
