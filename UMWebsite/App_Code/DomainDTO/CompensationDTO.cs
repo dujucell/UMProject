@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Runtime.Serialization;
 using UMWebsite.Models;
 
@@ -19,7 +17,7 @@ namespace UMWebsite.DomainDTO
         [DataMember]
         public string CompensationDescription { get; set; }
 
-        public static CompensationDto createCompensationDTO(Category obj)
+        public static CompensationDto createCompensationDTO(Compensation obj)
         {
             CompensationDto com = new CompensationDto();
             com.CompensationId = obj.CompensationId;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using UMWebsite.Models;
+using System.Runtime.Serialization;
 
 namespace UMWebsite.DomainDTO
 {
@@ -31,4 +31,3 @@ namespace UMWebsite.DomainDTO
         }
     }
 }
-
