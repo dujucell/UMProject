@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UMJobWebsite.Models
 {
-    public partial class Category
+    public class Category
     {
         public Category()
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UMJobWebsite.Models
 {
-    public partial class sysdiagram
+    public class sysdiagram
     {
         public string name { get; set; }
         public int principal_id { get; set; }

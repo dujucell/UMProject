@@ -4,7 +4,7 @@ using UMJobWebsite.Models.Mapping;
 
 namespace UMJobWebsite.Models
 {
-    public partial class JobBankContext : DbContext
+    public class JobBankContext : DbContext
     {
         static JobBankContext()
         {
