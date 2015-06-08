@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UMRecruiteeWebsite.Models
 {
-    public partial class Recruitee
+    public class Recruitee
     {
         public Recruitee()
         {

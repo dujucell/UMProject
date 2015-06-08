@@ -33,11 +33,11 @@ namespace UMRecruiteeWebsite.Models.Mapping
             this.HasMany(t => t.Recruitees)
                 .WithMany(t => t.Categories)
                 .Map(m =>
-                {
-                    m.ToTable("RecruiteeCategory");
-                    m.MapLeftKey("CategoryId");
-                    m.MapRightKey("RecruiteeId");
-                });
+                    {
+                        m.ToTable("RecruiteeCategory");
+                        m.MapLeftKey("CategoryId");
+                        m.MapRightKey("RecruiteeId");
+                    });
 
 
         }

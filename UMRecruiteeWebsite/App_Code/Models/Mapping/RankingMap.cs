@@ -17,6 +17,7 @@ namespace UMRecruiteeWebsite.Models.Mapping
                 .HasMaxLength(5);
 
             this.Property(t => t.RankingName)
+                .IsRequired()
                 .HasMaxLength(20);
 
             // Table & Column Mappings

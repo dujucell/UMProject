@@ -4,7 +4,7 @@ using UMRecruiteeWebsite.Models.Mapping;
 
 namespace UMRecruiteeWebsite.Models
 {
-    public partial class RecruiteeBankContext : DbContext
+    public class RecruiteeBankContext : DbContext
     {
         static RecruiteeBankContext()
         {
