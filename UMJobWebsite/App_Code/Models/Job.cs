@@ -8,7 +8,7 @@ namespace UMJobWebsite.Models
         public Job()
         {
             this.Categories = new List<Category>();
-	    this.Skills = new List<Skill>();
+	        this.Skills = new List<Skill>();
         }
 
         public System.Guid JobId { get; set; }
@@ -22,7 +22,7 @@ namespace UMJobWebsite.Models
         public virtual Compensation Compensation { get; set; }
         public virtual Employer Employer { get; set; }
         public virtual ICollection<Category> Categories { get; set; }
-	public virtual ICollection<Skill> Skills { get; set; }
+	    public virtual ICollection<Skill> Skills { get; set; }
 
         public static Job CreateJob(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId, 
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
