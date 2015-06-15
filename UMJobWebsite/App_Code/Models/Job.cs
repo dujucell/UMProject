@@ -38,6 +38,11 @@ namespace UMJobWebsite.Models
             obj.JobCompensationValue = JobCompensationValue;
             return obj;
         }
-    
+
+
+        internal static Job createJob(Guid guid1, string p1, string p2, Guid guid2, string p3, int p4, string p5, decimal p6)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

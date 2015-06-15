@@ -8,7 +8,7 @@ using UMJobWebsite.Exceptions.Service;
 
 namespace UMJobWebsite.Business
 {
-    public class CompensationManager : BusinessManager
+    public class EmployerManager : BusinessManager
     {
 
         public List<Employer> selectAllEmployer()
