@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/UMRecruiteeWebsite/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/UMRecruiteeWebsite/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/UMRecruiteeWebsite/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UMRecruiteeWebsite.DomainDTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_selectAllCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectAllCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectCategoryById_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectCategoryById" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectCategoryById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectCategoryByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCategory" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectAllRanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllRanking" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectAllRanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllRankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectRankingById_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectRankingById" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectRankingById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectRankingByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertRanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertRanking" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertRanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertRankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateRanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateRanking" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateRanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateRankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteRanking_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRanking" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteRanking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRankingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectAllRecruitee_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllRecruitee" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectAllRecruitee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllRecruiteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectRecruiteeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectRecruiteeById" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectRecruiteeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectRecruiteeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertRecruitee_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertRecruitee" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertRecruitee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertRecruiteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateRecruitee_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateRecruitee" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateRecruitee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateRecruiteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteRecruitee_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRecruitee" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteRecruitee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRecruiteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectAllSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllSkill" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectAllSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectAllSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectSkillById_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectSkillById" />
+  </wsdl:message>
+  <wsdl:message name="IService_selectSkillById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectSkillByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertSkill" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateSkill" />
+  </wsdl:message>
+  <wsdl:message name="IService_updateSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateSkillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteSkill_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSkill" />
+  </wsdl:message>
+  <wsdl:message name="IService_deleteSkill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSkillResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="selectAllCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectAllCategory" message="tns:IService_selectAllCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectAllCategoryResponse" message="tns:IService_selectAllCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectCategoryById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectCategoryById" message="tns:IService_selectCategoryById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectCategoryByIdResponse" message="tns:IService_selectCategoryById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertCategory" message="tns:IService_insertCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertCategoryResponse" message="tns:IService_insertCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/updateCategory" message="tns:IService_updateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/updateCategoryResponse" message="tns:IService_updateCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/deleteCategory" message="tns:IService_deleteCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/deleteCategoryResponse" message="tns:IService_deleteCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllRanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectAllRanking" message="tns:IService_selectAllRanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectAllRankingResponse" message="tns:IService_selectAllRanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectRankingById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectRankingById" message="tns:IService_selectRankingById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectRankingByIdResponse" message="tns:IService_selectRankingById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertRanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertRanking" message="tns:IService_insertRanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertRankingResponse" message="tns:IService_insertRanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/updateRanking" message="tns:IService_updateRanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/updateRankingResponse" message="tns:IService_updateRanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRanking">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/deleteRanking" message="tns:IService_deleteRanking_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/deleteRankingResponse" message="tns:IService_deleteRanking_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllRecruitee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectAllRecruitee" message="tns:IService_selectAllRecruitee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectAllRecruiteeResponse" message="tns:IService_selectAllRecruitee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectRecruiteeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectRecruiteeById" message="tns:IService_selectRecruiteeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectRecruiteeByIdResponse" message="tns:IService_selectRecruiteeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertRecruitee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertRecruitee" message="tns:IService_insertRecruitee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertRecruiteeResponse" message="tns:IService_insertRecruitee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateRecruitee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/updateRecruitee" message="tns:IService_updateRecruitee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/updateRecruiteeResponse" message="tns:IService_updateRecruitee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecruitee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/deleteRecruitee" message="tns:IService_deleteRecruitee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/deleteRecruiteeResponse" message="tns:IService_deleteRecruitee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectAllSkill" message="tns:IService_selectAllSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectAllSkillResponse" message="tns:IService_selectAllSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectSkillById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/selectSkillById" message="tns:IService_selectSkillById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/selectSkillByIdResponse" message="tns:IService_selectSkillById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertSkill" message="tns:IService_insertSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertSkillResponse" message="tns:IService_insertSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/updateSkill" message="tns:IService_updateSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/updateSkillResponse" message="tns:IService_updateSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSkill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/deleteSkill" message="tns:IService_deleteSkill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/deleteSkillResponse" message="tns:IService_deleteSkill_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="selectAllCategory">
+      <soap:operation soapAction="http://tempuri.org/IService/selectAllCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectCategoryById">
+      <soap:operation soapAction="http://tempuri.org/IService/selectCategoryById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCategory">
+      <soap:operation soapAction="http://tempuri.org/IService/insertCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCategory">
+      <soap:operation soapAction="http://tempuri.org/IService/updateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCategory">
+      <soap:operation soapAction="http://tempuri.org/IService/deleteCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllRanking">
+      <soap:operation soapAction="http://tempuri.org/IService/selectAllRanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectRankingById">
+      <soap:operation soapAction="http://tempuri.org/IService/selectRankingById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRanking">
+      <soap:operation soapAction="http://tempuri.org/IService/insertRanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRanking">
+      <soap:operation soapAction="http://tempuri.org/IService/updateRanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRanking">
+      <soap:operation soapAction="http://tempuri.org/IService/deleteRanking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllRecruitee">
+      <soap:operation soapAction="http://tempuri.org/IService/selectAllRecruitee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectRecruiteeById">
+      <soap:operation soapAction="http://tempuri.org/IService/selectRecruiteeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRecruitee">
+      <soap:operation soapAction="http://tempuri.org/IService/insertRecruitee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateRecruitee">
+      <soap:operation soapAction="http://tempuri.org/IService/updateRecruitee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRecruitee">
+      <soap:operation soapAction="http://tempuri.org/IService/deleteRecruitee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectAllSkill">
+      <soap:operation soapAction="http://tempuri.org/IService/selectAllSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectSkillById">
+      <soap:operation soapAction="http://tempuri.org/IService/selectSkillById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSkill">
+      <soap:operation soapAction="http://tempuri.org/IService/insertSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSkill">
+      <soap:operation soapAction="http://tempuri.org/IService/updateSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSkill">
+      <soap:operation soapAction="http://tempuri.org/IService/deleteSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost/UMRecruiteeWebsite/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
