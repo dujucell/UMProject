@@ -177,6 +177,11 @@ public class ServiceMobile : IServiceMobile
         return mgr.deleteRecruitee(obj);
     }
 
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+    {
+        return RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId);
+    }
+
     #endregion
 
     #region Skill

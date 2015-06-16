@@ -21,7 +21,7 @@ namespace UMJobWebsite.Models.Mapping
                 .HasMaxLength(5);
 
             this.Property(t => t.JobDescription)
-                .HasMaxLength(50);
+                .HasMaxLength(100);
 
             this.Property(t => t.JobExperienceLevel)
                 .IsRequired()

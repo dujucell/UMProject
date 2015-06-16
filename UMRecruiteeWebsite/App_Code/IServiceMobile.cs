@@ -64,6 +64,10 @@ public interface IServiceMobile
     [OperationContract]
     Boolean deleteRecruitee(System.Guid RecruiteeId, String RankingId);
 
+    [OperationContract]
+    RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+
+
     #endregion
 
     #region Skill

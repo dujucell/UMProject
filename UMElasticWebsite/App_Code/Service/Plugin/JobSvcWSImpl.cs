@@ -1,0 +1,104 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using JobService;
+using UMElasticWebsite.Service.Interface;
+
+namespace UMElasticWebsite.Service.Plugin
+{
+    public class JobSvcWSImpl : IJobSvc
+    {
+        public List<JobDto> selectAllJob()
+        {
+            JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient();
+
+            try
+            {
+                return svc.selectAllJob().ToList<JobDto>();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        
+        public JobDto selectJobById(JobDto obj)
+        {
+            JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient();
+
+            try
+            {
+                return svc.selectJobById(obj);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public Boolean insertJob(JobDto obj)
+        {
+            using (JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient())
+            {
+                try
+                {                        
+                    return svc.insertJob(obj);
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+        }
+
+        public Boolean updateJob(JobDto obj)
+        {
+            using (JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient())
+            {
+                try
+                {
+                    JobDto rec = svc.selectJobById(obj);
+
+                    if (rec != null)
+                    {
+                        return svc.updateJob(obj);
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
+        }
+
+        public Boolean deleteJob(JobDto obj)
+        {
+            using (JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient())
+            {
+                try
+                {
+                    JobDto rec = svc.selectJobById(obj);
+
+                    if (rec != null)
+                    {
+                        return svc.deleteJob(obj);
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+        }
+    }
+}

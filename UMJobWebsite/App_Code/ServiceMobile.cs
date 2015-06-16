@@ -232,6 +232,12 @@ public class ServiceMobile : IServiceMobile
         return mgr.deleteJob(obj);
     }
 
+    public JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                                    String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
+    {
+        return JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
+    }
+
     #endregion
 
     #region Skill
