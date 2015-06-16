@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" />
+  <xs:import schemaLocation="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:element name="selectAllCategory">
     <xs:complexType>
       <xs:sequence />
@@ -273,6 +274,27 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="createJobDTO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="JobId" type="q25:guid" />
+        <xs:element minOccurs="0" name="JobName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CompensationId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="EmployerId" type="q26:guid" />
+        <xs:element minOccurs="0" name="JobDescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="JobQuota" type="xs:int" />
+        <xs:element minOccurs="0" name="JobExperienceLevel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="JobCompensationValue" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createJobDTOResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="createJobDTOResult" nillable="true" type="q27:JobDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="selectAllSkill">
     <xs:complexType>
       <xs:sequence />
@@ -281,28 +303,28 @@
   <xs:element name="selectAllSkillResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="selectAllSkillResult" nillable="true" type="q25:ArrayOfSkillDto" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="selectAllSkillResult" nillable="true" type="q28:ArrayOfSkillDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="selectSkillById">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q26:SkillDto" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q29:SkillDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="selectSkillByIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="selectSkillByIdResult" nillable="true" type="q27:SkillDto" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="selectSkillByIdResult" nillable="true" type="q30:SkillDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="insertSkill">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q28:SkillDto" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q31:SkillDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -316,7 +338,7 @@
   <xs:element name="updateSkill">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q29:SkillDto" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q32:SkillDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -330,7 +352,7 @@
   <xs:element name="deleteSkill">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q30:SkillDto" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/UMJobWebsite.DomainDTO" minOccurs="0" name="obj" nillable="true" type="q33:SkillDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

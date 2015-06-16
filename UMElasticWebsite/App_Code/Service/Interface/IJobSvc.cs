@@ -14,5 +14,8 @@ namespace UMElasticWebsite.Service.Interface
         Boolean insertJob(JobDto obj);
         Boolean updateJob(JobDto obj);
         Boolean deleteJob(JobDto obj);
+        JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                            String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+        
     }
 }

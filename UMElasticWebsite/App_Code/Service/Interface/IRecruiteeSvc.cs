@@ -14,5 +14,7 @@ namespace UMElasticWebsite.Service.Interface
         Boolean insertRecruitee(RecruiteeDto obj);
         Boolean updateRecruitee(RecruiteeDto obj);
         Boolean deleteRecruitee(RecruiteeDto obj);
+        RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+
     }
 }

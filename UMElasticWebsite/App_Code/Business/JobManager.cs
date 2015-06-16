@@ -78,6 +78,20 @@ namespace UMElasticWebsite.Business
                 return false;
             }
         }
+
+        public JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                                    String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
+        {
+            try
+            {
+                IJobSvc svc = (IJobSvc)this.getService(typeof(IJobSvc).Name);
+                return svc.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
+            }
+            catch(ServiceLoadException ex)
+            {
+                return null;
+            }
+        }
     }
        
 }

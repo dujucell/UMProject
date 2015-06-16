@@ -100,5 +100,14 @@ namespace UMElasticWebsite.Service.Plugin
                 }
             }
         }
+
+        public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+        {
+            using (RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient())
+            {
+                return svc.createRecruiteeDTO(RecruiteeId, RankingId);
+            }
+            
+        }
     }
 }

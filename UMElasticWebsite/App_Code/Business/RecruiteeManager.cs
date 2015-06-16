@@ -77,6 +77,21 @@ namespace UMElasticWebsite.Business
                 return false;
             }
         }
+
+        public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+        {
+            try
+            {
+                IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
+                return svc.createRecruiteeDTO(RecruiteeId, RankingId); 
+            }
+            catch (ServiceLoadException ex)
+            {
+                return null;
+            }
+        }
+
+
     }
        
 }

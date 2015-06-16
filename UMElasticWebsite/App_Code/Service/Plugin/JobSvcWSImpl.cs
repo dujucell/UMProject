@@ -100,5 +100,14 @@ namespace UMElasticWebsite.Service.Plugin
                 }
             }
         }
+
+        public JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                                    String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
+        {
+            using(JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient())
+            {
+                return svc.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
+            }
+        }
     }
 }

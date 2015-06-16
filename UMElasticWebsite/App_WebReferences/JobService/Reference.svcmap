@@ -22,11 +22,11 @@
     <MetadataSource Address="http://umdbms.no-ip.info/umjobwebsite/Service.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="c769f61e-8e72-43f8-bc90-42aeacaced13" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?wsdl" />
     <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="55a127b0-a6e4-4e78-a9bf-7180780319c2" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?disco" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="4af7e6ed-346c-4301-b1cd-267fe4194d77" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?xsd=xsd2" />
     <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="e9910f60-99f2-457f-8c2c-d23cd8339394" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?xsd=xsd1" />
     <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="a1db7199-ebca-4b42-a1cb-efdec255d2b5" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="c769f61e-8e72-43f8-bc90-42aeacaced13" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?wsdl" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="4af7e6ed-346c-4301-b1cd-267fe4194d77" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMJobWebsite/Service.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

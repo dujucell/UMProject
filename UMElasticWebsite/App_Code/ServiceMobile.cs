@@ -87,21 +87,21 @@ public class ServiceMobile : IServiceMobile
     public Boolean insertRecruitee(System.Guid RecruiteeId, String RankingId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        RecruiteeDto obj = RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId);
+        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId);
         return mgr.insertRecruitee(obj);
     }
 
     public Boolean updateRecruitee(System.Guid RecruiteeId, String RankingId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        RecruiteeDto obj = RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId);
+        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId);
         return mgr.updateRecruitee(obj);
     }
 
     public Boolean deleteRecruitee(System.Guid RecruiteeId, String RankingId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        RecruiteeDto obj = RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId);
+        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId);
         return mgr.deleteRecruitee(obj);
     }
 
@@ -127,7 +127,7 @@ public class ServiceMobile : IServiceMobile
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
     {
         JobManager mgr = new JobManager();
-        JobDto obj = JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
+        JobDto obj = mgr.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
         return mgr.insertJob(obj);
     }
 
@@ -135,7 +135,7 @@ public class ServiceMobile : IServiceMobile
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
     {
         JobManager mgr = new JobManager();
-        JobDto obj = JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
+        JobDto obj = mgr.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
         return mgr.updateJob(obj);
     }
 
@@ -143,7 +143,7 @@ public class ServiceMobile : IServiceMobile
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
     {
         JobManager mgr = new JobManager();
-        JobDto obj = JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
+        JobDto obj = mgr.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
         return mgr.deleteJob(obj);
     }
 

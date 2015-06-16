@@ -97,6 +97,12 @@
   <wsdl:message name="IServiceWCF_deleteRecruitee_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteRecruiteeResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceWCF_createRecruiteeDTO_InputMessage">
+    <wsdl:part name="parameters" element="tns:createRecruiteeDTO" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_createRecruiteeDTO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createRecruiteeDTOResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceWCF_selectAllSkill_InputMessage">
     <wsdl:part name="parameters" element="tns:selectAllSkill" />
   </wsdl:message>
@@ -187,6 +193,10 @@
     <wsdl:operation name="deleteRecruitee">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/deleteRecruitee" message="tns:IServiceWCF_deleteRecruitee_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/deleteRecruiteeResponse" message="tns:IServiceWCF_deleteRecruitee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createRecruiteeDTO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/createRecruiteeDTO" message="tns:IServiceWCF_createRecruiteeDTO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/createRecruiteeDTOResponse" message="tns:IServiceWCF_createRecruiteeDTO_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="selectAllSkill">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/selectAllSkill" message="tns:IServiceWCF_selectAllSkill_InputMessage" />
@@ -339,6 +349,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteRecruitee">
       <soap:operation soapAction="http://tempuri.org/IServiceWCF/deleteRecruitee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createRecruiteeDTO">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/createRecruiteeDTO" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
