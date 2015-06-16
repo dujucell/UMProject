@@ -64,6 +64,11 @@ public interface IServiceWCF
     [OperationContract]
     Boolean deleteRecruitee(RecruiteeDto obj);
 
+    [OperationContract]
+    RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+
+
+
     #endregion
 
     #region Skill

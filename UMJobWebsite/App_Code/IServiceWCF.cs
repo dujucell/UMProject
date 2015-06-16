@@ -83,6 +83,10 @@ public interface IServiceWCF
     [OperationContract]
     Boolean deleteJob(JobDto obj);
 
+    [OperationContract]
+    JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                       String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+    
     #endregion
 
     #region Skill

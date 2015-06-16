@@ -88,7 +88,7 @@ public interface IServiceMobile
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
     [OperationContract]
     JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
-                                    String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+                       String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
 
     #endregion
 

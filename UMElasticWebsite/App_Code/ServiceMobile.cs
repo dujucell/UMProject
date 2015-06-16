@@ -127,15 +127,7 @@ public class ServiceMobile : IServiceMobile
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
     {
         JobManager mgr = new JobManager();
-        JobDto obj = new JobDto();
-        obj.JobId = JobId;
-        obj.JobName = JobName;
-        obj.CompensationId = CompensationId;
-        obj.EmployerId = EmployerId;
-        obj.JobDescription = JobDescription;
-        obj.JobQuota = JobQuota;
-        obj.JobExperienceLevel = JobExperienceLevel;
-        obj.JobCompensationValue = JobCompensationValue;
+        JobDto obj = JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
         return mgr.insertJob(obj);
     }
 
@@ -143,15 +135,7 @@ public class ServiceMobile : IServiceMobile
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
     {
         JobManager mgr = new JobManager();
-        JobDto obj = new JobDto();
-        obj.JobId = JobId;
-        obj.JobName = JobName;
-        obj.CompensationId = CompensationId;
-        obj.EmployerId = EmployerId;
-        obj.JobDescription = JobDescription;
-        obj.JobQuota = JobQuota;
-        obj.JobExperienceLevel = JobExperienceLevel;
-        obj.JobCompensationValue = JobCompensationValue;
+        JobDto obj = JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
         return mgr.updateJob(obj);
     }
 
@@ -159,15 +143,7 @@ public class ServiceMobile : IServiceMobile
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
     {
         JobManager mgr = new JobManager();
-        JobDto obj = new JobDto();
-        obj.JobId = JobId;
-        obj.JobName = JobName;
-        obj.CompensationId = CompensationId;
-        obj.EmployerId = EmployerId;
-        obj.JobDescription = JobDescription;
-        obj.JobQuota = JobQuota;
-        obj.JobExperienceLevel = JobExperienceLevel;
-        obj.JobCompensationValue = JobCompensationValue;
+        JobDto obj = JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
         return mgr.deleteJob(obj);
     }
 

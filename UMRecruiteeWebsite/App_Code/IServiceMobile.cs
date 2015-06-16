@@ -67,7 +67,6 @@ public interface IServiceMobile
     [OperationContract]
     RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
 
-
     #endregion
 
     #region Skill
