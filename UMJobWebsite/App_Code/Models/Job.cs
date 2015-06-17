@@ -24,7 +24,7 @@ namespace UMJobWebsite.Models
         public virtual ICollection<Category> Categories { get; set; }
 	    public virtual ICollection<Skill> Skills { get; set; }
 
-        public static Job CreateJob(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId, 
+        public static Job createJob(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId, 
                                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
         {
             Job obj = new Job();
@@ -40,9 +40,6 @@ namespace UMJobWebsite.Models
         }
 
 
-        internal static Job createJob(Guid guid1, string p1, string p2, Guid guid2, string p3, int p4, string p5, decimal p6)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
