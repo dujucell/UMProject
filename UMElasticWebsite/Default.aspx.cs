@@ -36,25 +36,25 @@ public partial class _Default : System.Web.UI.Page
 
         //rec_select = mgr.selectRecruiteeById(rec);
 
-        JobManager mgr = new JobManager();
-        Guid id = Guid.NewGuid();
-        JobDto job = mgr.createJobDTO(new Guid("367b72e8-98b5-45da-9918-6e774f525e89"), "Job name", "COMP9",
-            new Guid("3936A544-59C3-401D-814B-D29C775A81AE"), "Job description", 12, "Job level", 0);
+        //JobManager mgr = new JobManager();
+        //Guid id = Guid.NewGuid();
+        //JobDto job = mgr.createJobDTO(new Guid("367b72e8-98b5-45da-9918-6e774f525e89"), "Job name", "COMP9",
+        //    new Guid("3936A544-59C3-401D-814B-D29C775A81AE"), "Job description", 12, "Job level", 0);
 
-        Boolean result_insert = mgr.insertJob(job);
+        //Boolean result_insert = mgr.insertJob(job);
 
-        List<JobDto> list_job = mgr.selectAllJob();
+        //List<JobDto> list_job = mgr.selectAllJob();
 
-        //JobDto job_select = mgr.selectJobById(job);
+        //JobDto job_select1 = mgr.selectJobById(job);
 
         //job.JobDescription = "DESCRIPTION 2";
         //Boolean result_update = mgr.updateJob(job);
 
-        //job_select = mgr.selectJobById(job);
+        //JobDto job_select2 = mgr.selectJobById(job);
 
         //Boolean result_delete = mgr.deleteJob(job);
 
-        //job_select = mgr.selectJobById(job);
+        //JobDto job_select3 = mgr.selectJobById(job);
        
     }
 }
