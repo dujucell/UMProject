@@ -34,8 +34,8 @@ public partial class _Default : System.Web.UI.Page
 
         RecruiteeManager mgr = new RecruiteeManager();
         Recruitee obj = new Recruitee();
-        obj.RankingId = "RAN01";
-        obj.RecruiteeId = System.Guid.NewGuid();
+        //obj.RankingId = "RAN01";
+        //obj.RecruiteeId = System.Guid.NewGuid();
      //   Boolean result = mgr.insertRecruitee(obj);
 
         List<Recruitee> list = mgr.selectAllRecruitee();
