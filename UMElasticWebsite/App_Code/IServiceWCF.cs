@@ -48,6 +48,10 @@ public interface IServiceWCF
     [OperationContract]
     Boolean deleteRecruitee(RecruiteeDto obj);
 
+    [OperationContract]
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+
+
     #endregion
 
     #region Job
@@ -67,5 +71,9 @@ public interface IServiceWCF
     [OperationContract]
     Boolean deleteJob(JobDto obj);
 
+    [OperationContract]
+    public JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                    String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+    
     #endregion
 }

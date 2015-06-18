@@ -101,6 +101,12 @@ public class Service : IServiceWCF
         return mgr.deleteRecruitee(dto);
     }
 
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        return mgr.createRecruiteeDTO(RecruiteeId, RankingId);
+    }
+
     #endregion
 
     #region Job
@@ -134,6 +140,14 @@ public class Service : IServiceWCF
         JobManager mgr = new JobManager();
         return mgr.deleteJob(dto);
     }
+
+    public JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                            String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
+    {
+        JobManager mgr = new JobManager();
+        return mgr.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
+    }
+        
 
     #endregion
 
