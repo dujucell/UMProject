@@ -55,6 +55,9 @@ public partial class _Default : System.Web.UI.Page
         //Boolean result_delete = mgr.deleteJob(job);
 
         //JobDto job_select3 = mgr.selectJobById(job);
+        //JobDto job_select4 = mgr.selectJobById(job);
+
+        
        
     }
 }
