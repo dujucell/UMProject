@@ -12,7 +12,7 @@ namespace UMElasticWebsite.Service.Plugin
         public List<JobDto> selectAllJob()
         {
             JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient();
-
+           
             try
             {
                 return svc.selectAllJob().ToList<JobDto>();

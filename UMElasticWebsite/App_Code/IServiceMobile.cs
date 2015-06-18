@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using UMElasticWebsite.DomainDTO;
+using JobService;
+using RecruiteeService;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IServiceMobile" in both code and config file together.
 [ServiceContract]
@@ -27,6 +29,52 @@ public interface IServiceMobile
     Boolean deleteTask(System.Guid TaskId, System.Guid JobId, System.Guid RecruiteeId, String TaskDescription);
     #endregion
 
-   
+    #region Recruitee
+    [OperationContract]
+    List<RecruiteeDto> selectAllRecruitee();
+    
+    [OperationContract]
+    RecruiteeDto selectRecruiteeById(System.Guid RecruiteeId);
+
+    [OperationContract]
+    Boolean insertRecruitee(System.Guid RecruiteeId, String RankingId);
+
+    [OperationContract]
+    Boolean updateRecruitee(System.Guid RecruiteeId, String RankingId);
+
+    [OperationContract]
+    Boolean deleteRecruitee(System.Guid RecruiteeId, String RankingId);
+
+    [OperationContract]
+    RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+    
+
+    #endregion
+
+    #region Job
+    [OperationContract]
+    List<JobDto> selectAllJob();
+
+    [OperationContract]
+     JobDto selectJobById(System.Guid JobId);
+
+    [OperationContract]
+     Boolean insertJob(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                       String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+
+    [OperationContract]
+     Boolean updateJob(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                       String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+
+    [OperationContract]
+     Boolean deleteJob(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                       String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+
+    [OperationContract]
+     JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                       String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
+    
+
+    #endregion
 }
 

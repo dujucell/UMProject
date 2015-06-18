@@ -105,6 +105,11 @@ public class ServiceMobile : IServiceMobile
         return mgr.deleteRecruitee(obj);
     }
 
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId) {
+        RecruiteeManager mgr = new RecruiteeManager();
+        return mgr.createRecruiteeDTO(RecruiteeId,RankingId);
+    }
+
     #endregion
 
     #region Job
@@ -145,6 +150,13 @@ public class ServiceMobile : IServiceMobile
         JobManager mgr = new JobManager();
         JobDto obj = mgr.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
         return mgr.deleteJob(obj);
+    }
+    
+    public JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
+                                    String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue)
+    {
+        JobManager mgr = new JobManager();
+        return mgr.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
     }
 
     #endregion
