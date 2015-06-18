@@ -57,6 +57,11 @@ public partial class _Default : System.Web.UI.Page
         //JobDto job_select3 = mgr.selectJobById(job);
         //JobDto job_select4 = mgr.selectJobById(job);
 
+        // SkillRecruiteeManager mgr = new SkillRecruiteeManager();
+        // List<RecruiteeService.SkillDto> list = mgr.selectAllSkill();
+
+
+
         
        
     }
