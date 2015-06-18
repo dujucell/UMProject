@@ -32,8 +32,8 @@ public partial class _Default : System.Web.UI.Page
         //ServiceMobile svc = new ServiceMobile();
         //List<SkillDto> list = svc.selectAllSkill();
 
-        SkillManager mgr = new SkillManager();
-        List<Skill> list2 = mgr.selectAllSkill();
+        //SkillManager mgr = new SkillManager();
+        //List<Skill> list2 = mgr.selectAllSkill();
         
 
 
