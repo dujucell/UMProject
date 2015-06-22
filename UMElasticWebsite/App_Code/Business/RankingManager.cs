@@ -78,18 +78,18 @@ namespace UMElasticWebsite.Business
             }
         }
 
-        //public RankingDto createRankingDTO(System.Guid RankingId, String RankingId)
-        //{
-        //    try
-        //    {
-        //        IRankingSvc svc = (IRankingSvc)this.getService(typeof(IRankingSvc).Name);
-        //        return svc.createRankingDTO(RankingId, RankingId);
-        //    }
-        //    catch (ServiceLoadException ex)
-        //    {
-        //        return null;
-        //    }
-        //}
+        public RankingDto createRankingDTO(String RankingId, String RankingName)
+        {
+            try
+            {
+                IRankingSvc svc = (IRankingSvc)this.getService(typeof(IRankingSvc).Name);
+                return svc.createRankingDTO(RankingId, RankingName);
+            }
+            catch (ServiceLoadException ex)
+            {
+                return null;
+            }
+        }
     }
        
 }

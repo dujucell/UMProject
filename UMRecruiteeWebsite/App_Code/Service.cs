@@ -121,6 +121,11 @@ public class Service : IServiceWCF
         return mgr.deleteRanking(obj);
     }
 
+    public RankingDto createRankingDTO(String RankingId, String RankingName)
+    {
+        return RankingDto.createRankingDTO(RankingId, RankingName);
+    }
+
     #endregion
 
     #region Recruitee

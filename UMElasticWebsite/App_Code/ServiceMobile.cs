@@ -161,4 +161,86 @@ public class ServiceMobile : IServiceMobile
 
     #endregion
 
+    #region SkillJob
+
+    public List<JobService.SkillDto> selectAllSkillJob()
+    {
+        SkillJobManager mgr = new SkillJobManager();
+        return mgr.selectAllSkill();
+    }
+
+    public JobService.SkillDto selectSkillJobById(String SkillId)
+    {
+        SkillJobManager mgr = new SkillJobManager();
+        JobService.SkillDto obj = new JobService.SkillDto();
+        obj.SkillId = SkillId;
+        return mgr.selectSkillById(obj);
+    }
+
+    #endregion
+
+    #region SkillRecruitee
+
+    public List<RecruiteeService.SkillDto> selectAllSkillRecruitee()
+    {
+        SkillRecruiteeManager mgr = new SkillRecruiteeManager();
+        return mgr.selectAllSkill();
+    }
+
+    public RecruiteeService.SkillDto selectSKillRecruiteeById(String SkillId)
+    {
+        SkillRecruiteeManager mgr = new SkillRecruiteeManager();
+        RecruiteeService.SkillDto obj = new RecruiteeService.SkillDto();
+        obj.SkillId = SkillId;
+        return mgr.selectSkillById(obj);
+    }
+
+    #endregion
+
+    #region Ranking
+
+    public List<RankingDto> selectAllRanking()
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.selectAllRanking();
+    }
+
+    public RankingDto selectRankingById(String RankingId)
+    {
+        RankingManager mgr = new RankingManager();
+        RankingDto obj = new RankingDto();
+        obj.RankingId = RankingId;
+        return mgr.selectRankingById(obj);
+    }
+
+    public Boolean insertRanking(String RankingId, String RankingName)
+    {
+        RankingManager mgr = new RankingManager();
+        RankingDto obj = mgr.createRankingDTO(RankingId, RankingName);
+        return mgr.insertRanking(obj);
+    }
+
+    public Boolean updateRanking(String RankingId, String RankingName)
+    {
+        RankingManager mgr = new RankingManager();
+        RankingDto obj = mgr.createRankingDTO(RankingId, RankingName);
+        return mgr.updateRanking(obj);
+    }
+
+    public Boolean deleteRanking(String RankingId, String RankingName)
+    {
+        RankingManager mgr = new RankingManager();
+        RankingDto obj = mgr.createRankingDTO(RankingId, RankingName);
+        return mgr.deleteRanking(obj);
+    }
+
+    public RankingDto createRankingDTO(String RankingId, String RankingName)
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.createRankingDTO(RankingId, RankingName);
+    }
+
+    #endregion
+
+
 }

@@ -14,6 +14,6 @@ namespace UMElasticWebsite.Service.Interface
         Boolean insertRanking(RankingDto obj);
         Boolean updateRanking(RankingDto obj);
         Boolean deleteRanking(RankingDto obj);
-        //RankingDto createRankingDTO(...)
+        RankingDto createRankingDTO(String RankingId, String RankingName);
     }
 }

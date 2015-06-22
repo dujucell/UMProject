@@ -101,13 +101,13 @@ namespace UMElasticWebsite.Service.Plugin
             }
         }
 
-        //public RankingDto createRankingDTO(...)
-        //{
-        //    using (RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient())
-        //    {
-        //        return svc.createRankingDTO(...);
-        //    }
-        //}
+        public RankingDto createRankingDTO(String RankingId, String RankingName)
+        {
+            using (RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient())
+            {
+                return svc.createRankingDTO(RankingId, RankingName);
+            }
+        }
 
     }
 }

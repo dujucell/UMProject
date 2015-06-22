@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4432789c-3c4c-476a-b8f6-9e895f39e92f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="548b367a-52ac-406c-afc8-39cd8b3b894c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://umdbms.no-ip.info/umrecruiteewebsite/service.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="8f4ebed2-974d-4ca6-a5dc-d7adfa921290" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="b6e9d7e2-3a32-4a68-aff7-4f24cd0f02b9" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="c80f73a5-3377-4333-a9ae-4e280766e7bd" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?wsdl" />
-    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="024d6dbc-2b2d-4f31-be03-04cdc6df7ac7" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="61666d76-53d0-48e7-9c4d-4b27ed939e64" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?disco" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="3525f5d9-6ea8-4241-a9fe-de4c0ee33371" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="0f004b22-c8f6-4420-87f3-cc57f74a3491" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="0f7be761-e73f-402d-b05e-81ad755fa808" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?wsdl" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="65db32d7-8fac-4326-8a18-eed35e173e98" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="32395626-0372-466c-bac3-bb97d2ca7b7b" SourceId="1" SourceUrl="http://umdbms.no-ip.info/UMRecruiteeWebsite/Service.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

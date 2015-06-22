@@ -76,4 +76,48 @@ public interface IServiceWCF
                     String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
     
     #endregion
+
+    #region SkillJob
+
+    [OperationContract]
+    List<JobService.SkillDto> selectAllSkillJob();
+
+    [OperationContract]
+    JobService.SkillDto selectSkillJobById(JobService.SkillDto obj);
+
+    #endregion
+
+    #region SkillRecruitee
+
+    [OperationContract]
+    List<RecruiteeService.SkillDto> selectAllSkillRecruitee();
+
+    [OperationContract]
+    RecruiteeService.SkillDto selectSKillRecruiteeById(RecruiteeService.SkillDto obj);
+
+    #endregion
+
+    #region Ranking
+
+    [OperationContract]
+    List<RankingDto> selectAllRanking();
+
+    [OperationContract]
+    RankingDto selectRankingById(RankingDto obj);
+
+    [OperationContract]
+    Boolean insertRanking(RankingDto obj);
+
+    [OperationContract]
+    Boolean updateRanking(RankingDto obj);
+
+    [OperationContract]
+    Boolean deleteRanking(RankingDto obj);
+
+    [OperationContract]
+    RankingDto createRankingDTO(String RankingId, String RankingName);
+
+    #endregion
+
+
 }

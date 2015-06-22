@@ -151,4 +151,77 @@ public class Service : IServiceWCF
 
     #endregion
 
+    #region SkillJob
+
+    public List<JobService.SkillDto> selectAllSkillJob()
+    {
+        SkillJobManager mgr = new SkillJobManager();
+        return mgr.selectAllSkill();
+    }
+
+    public JobService.SkillDto selectSkillJobById(JobService.SkillDto obj)
+    {
+        SkillJobManager mgr = new SkillJobManager();
+        return mgr.selectSkillById(obj);
+    }
+
+    #endregion
+
+    #region SkillRecruitee
+
+    public List<RecruiteeService.SkillDto> selectAllSkillRecruitee()
+    {
+        SkillRecruiteeManager mgr = new SkillRecruiteeManager();
+        return mgr.selectAllSkill();
+    }
+
+    public RecruiteeService.SkillDto selectSKillRecruiteeById(RecruiteeService.SkillDto obj)
+    {
+        SkillRecruiteeManager mgr = new SkillRecruiteeManager();
+        return mgr.selectSkillById(obj);
+    }
+
+    #endregion
+
+    #region Ranking
+
+    public List<RankingDto> selectAllRanking()
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.selectAllRanking();
+    }
+
+    public RankingDto selectRankingById(RankingDto obj)
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.selectRankingById(obj);
+    }
+
+    public Boolean insertRanking(RankingDto obj)
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.insertRanking(obj);
+    }
+
+    public Boolean updateRanking(RankingDto obj)
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.updateRanking(obj);
+    }
+
+    public Boolean deleteRanking(RankingDto obj)
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.deleteRanking(obj);
+    }
+
+    public RankingDto createRankingDTO(String RankingId, String RankingName)
+    {
+        RankingManager mgr = new RankingManager();
+        return mgr.createRankingDTO(RankingId, RankingName);
+    }
+
+    #endregion
+
+
 }

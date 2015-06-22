@@ -45,6 +45,9 @@ public interface IServiceWCF
     [OperationContract]
     Boolean deleteRanking(RankingDto obj);
 
+    [OperationContract]
+    RankingDto createRankingDTO(String RankingId, String RankingName);
+
     #endregion
 
     #region Recruitee

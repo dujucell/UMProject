@@ -76,5 +76,46 @@ public interface IServiceMobile
     
 
     #endregion
+
+    #region SkillJob
+
+    [OperationContract]
+    List<JobService.SkillDto> selectAllSkillJob();
+
+    [OperationContract]
+    JobService.SkillDto selectSkillJobById(String SkillId);
+
+    #endregion
+
+    #region SkillRecruitee
+
+    [OperationContract]
+    List<RecruiteeService.SkillDto> selectAllSkillRecruitee();
+
+    [OperationContract]
+    RecruiteeService.SkillDto selectSKillRecruiteeById(String SkillId);
+
+    #endregion
+
+    #region Ranking
+
+    [OperationContract]
+    List<RankingDto> selectAllRanking();
+    
+    [OperationContract]
+    RankingDto selectRankingById(String RankingId);
+
+    [OperationContract]
+    Boolean insertRanking(String RankingId, String RankingName);
+
+    [OperationContract]
+    Boolean updateRanking(String RankingId, String RankingName);
+
+    [OperationContract]
+    Boolean deleteRanking(String RankingId, String RankingName);
+
+    [OperationContract]
+    RankingDto createRankingDTO(String RankingId, String RankingName);
+    #endregion
 }
 

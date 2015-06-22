@@ -45,6 +45,9 @@ public interface IServiceMobile
     [OperationContract]
     Boolean deleteRanking(String RankingId, String RankingName);
 
+    [OperationContract]
+    RankingDto createRankingDTO(String RankingId, String RankingName);
+
     #endregion
 
     #region Recruitee
