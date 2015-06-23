@@ -117,5 +117,13 @@ public interface IServiceMobile
     [OperationContract]
     RankingDto createRankingDTO(String RankingId, String RankingName);
     #endregion
+
+    #region
+
+    [OperationContract]
+    Boolean addSkillToRecruitee(String RecruiteeId, String SkillId);
+
+    #endregion
+
 }
 

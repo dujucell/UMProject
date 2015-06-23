@@ -244,5 +244,36 @@ public class ServiceMobile : IServiceMobile
     }
 
     #endregion
-   
+
+    #region 
+
+    public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
+    {
+        RecruiteeManager rmgr = new RecruiteeManager();
+        SkillManager skmgr = new SkillManager();
+        
+        Recruitee robj = Recruitee.createRecruitee(RecruiteeId, null);
+        Recruitee rec = rmgr.selectRecruiteeById(robj);
+        Skill sobj = Skill.createSkill(SkillId, null, null);
+        Skill ski = skmgr.selectSkillById(sobj);
+
+        return rmgr.addSkillToRecruitee(rec, ski);
+    }
+
+
+    //public void addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
+    //{
+    //    RecruiteeManager rmgr = new RecruiteeManager();
+    //    SkillManager skmgr = new SkillManager();
+    //    Recruitee robj = Recruitee.createRecruitee(RecruiteeId, null);
+    //    Recruitee rec =  rmgr.selectRecruiteeById(robj);
+    //    Skill sobj = Skill.createSkill(SkillId, null, null);
+    //    Skill ski = skmgr.selectSkillById(sobj);
+    //    rec.Skills.Add(ski);
+    //    rmgr.updateRecruitee(rec);
+    //}
+
+    #endregion
+
+
 }

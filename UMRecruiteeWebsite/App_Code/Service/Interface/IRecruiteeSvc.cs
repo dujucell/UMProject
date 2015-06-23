@@ -13,5 +13,7 @@ namespace UMRecruiteeWebsite.Service.Interface
         Boolean insertRecruitee(Recruitee obj);
         Boolean updateRecruitee(Recruitee obj);
         Boolean deleteRecruitee(Recruitee obj);
+        Boolean addSkillToRecruitee(Recruitee obj, Skill skill);
+
     }
 }

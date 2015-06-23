@@ -32,13 +32,16 @@ public partial class _Default : System.Web.UI.Page
         //obj.CategoryDescription = "bla bla";
         //Boolean result = mgr.updateCategory(obj)
 
-        RecruiteeManager mgr = new RecruiteeManager();
-        Recruitee obj = new Recruitee();
-        //obj.RankingId = "RAN01";
-        //obj.RecruiteeId = System.Guid.NewGuid();
-     //   Boolean result = mgr.insertRecruitee(obj);
+     //   RecruiteeManager mgr = new RecruiteeManager();
+     //   Recruitee obj = new Recruitee();
+     //   //obj.RankingId = "RAN01";
+     //   //obj.RecruiteeId = System.Guid.NewGuid();
+     ////   Boolean result = mgr.insertRecruitee(obj);
 
-        List<Recruitee> list = mgr.selectAllRecruitee();
+     //   List<Recruitee> list = mgr.selectAllRecruitee();
+
+        ServiceMobile svc = new ServiceMobile();
+        Boolean result = svc.addSkillToRecruitee(Guid.Parse("8E11A767-6537-4AAB-955B-14EB54E14B83"), "SKI01");
 
        
     }

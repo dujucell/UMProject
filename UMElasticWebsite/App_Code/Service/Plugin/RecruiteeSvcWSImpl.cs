@@ -109,5 +109,13 @@ namespace UMElasticWebsite.Service.Plugin
             }
             
         }
+
+        public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
+        {
+            using (RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient())
+            {
+                return svc.addSkillToRecruitee(RecruiteeId, SkillId);
+            }
+        }
     }
 }

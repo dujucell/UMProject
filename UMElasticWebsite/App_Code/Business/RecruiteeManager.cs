@@ -83,11 +83,24 @@ namespace UMElasticWebsite.Business
             try
             {
                 IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
-                return svc.createRecruiteeDTO(RecruiteeId, RankingId); 
+                return svc.createRecruiteeDTO(RecruiteeId, RankingId);
             }
             catch (ServiceLoadException ex)
             {
                 return null;
+            }
+        }
+
+        public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String RankingId)
+        {
+            try
+            {
+                IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
+                return svc.addSkillToRecruitee(RecruiteeId, RankingId);
+            }
+            catch (ServiceLoadException ex)
+            {
+                return false;
             }
         }
 

@@ -242,5 +242,14 @@ public class ServiceMobile : IServiceMobile
 
     #endregion
 
+    #region
+
+    public Boolean addSkillToRecruitee(String RecruiteeId, String SkillId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        return mgr.addSkillToRecruitee(Guid.Parse(RecruiteeId), SkillId);   
+    }
+
+    #endregion
 
 }

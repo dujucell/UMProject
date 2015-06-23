@@ -304,4 +304,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="addSkillToRecruitee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="RecruiteeId" type="q28:guid" />
+        <xs:element minOccurs="0" name="SkillId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addSkillToRecruiteeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addSkillToRecruiteeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

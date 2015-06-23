@@ -77,5 +77,18 @@ namespace UMRecruiteeWebsite.Business
                 return false;
             }
         }
+
+        public Boolean addSkillToRecruitee(Recruitee obj, Skill skill)
+        {
+            try
+            {
+                IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
+                return svc.addSkillToRecruitee(obj, skill);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

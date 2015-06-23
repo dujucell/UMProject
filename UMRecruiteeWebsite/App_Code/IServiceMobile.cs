@@ -90,5 +90,13 @@ public interface IServiceMobile
 
     #endregion
 
+    #region
+
+    [OperationContract]
+    Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId);
+
+    #endregion
+
+
 
 }

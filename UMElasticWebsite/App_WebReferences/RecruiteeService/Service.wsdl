@@ -139,6 +139,12 @@
   <wsdl:message name="IServiceWCF_deleteSkill_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteSkillResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceWCF_addSkillToRecruitee_InputMessage">
+    <wsdl:part name="parameters" element="tns:addSkillToRecruitee" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_addSkillToRecruitee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addSkillToRecruiteeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceWCF">
     <wsdl:operation name="selectAllCategory">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/selectAllCategory" message="tns:IServiceWCF_selectAllCategory_InputMessage" />
@@ -227,6 +233,10 @@
     <wsdl:operation name="deleteSkill">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/deleteSkill" message="tns:IServiceWCF_deleteSkill_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/deleteSkillResponse" message="tns:IServiceWCF_deleteSkill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addSkillToRecruitee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/addSkillToRecruitee" message="tns:IServiceWCF_addSkillToRecruitee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/addSkillToRecruiteeResponse" message="tns:IServiceWCF_addSkillToRecruitee_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceWCF" type="tns:IServiceWCF">
@@ -422,6 +432,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteSkill">
       <soap:operation soapAction="http://tempuri.org/IServiceWCF/deleteSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addSkillToRecruitee">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/addSkillToRecruitee" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

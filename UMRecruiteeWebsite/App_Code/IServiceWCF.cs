@@ -90,4 +90,12 @@ public interface IServiceWCF
 
     #endregion
 
+    #region
+
+    [OperationContract]
+    Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId);
+    #endregion
+
+
+
 }
