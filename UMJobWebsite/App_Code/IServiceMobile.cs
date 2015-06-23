@@ -90,6 +90,14 @@ public interface IServiceMobile
     JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
                        String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
 
+    [OperationContract]
+    Boolean addSkillToJob(System.Guid JobId, String SkillId);
+    
+    [OperationContract]
+    Boolean removeSkillFromJob(System.Guid JobId, String SkillId);
+    
+    [OperationContract]
+    List<JobDto> selectJobBySkillId(String skillId);
     #endregion
 
     #region Skill

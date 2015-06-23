@@ -59,6 +59,9 @@ public interface IServiceWCF
     RecruiteeDto selectRecruiteeById(RecruiteeDto obj);
 
     [OperationContract]
+    List<RecruiteeDto> selectRecruiteeBySkillId(String skillId);
+
+    [OperationContract]
     Boolean insertRecruitee(RecruiteeDto obj);
 
     [OperationContract]
@@ -69,6 +72,12 @@ public interface IServiceWCF
 
     [OperationContract]
     RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+
+    [OperationContract]
+    Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId);
+
+    [OperationContract]
+    Boolean removeSkillFromRecruitee(System.Guid RecruiteeId, String SkillId);
 
     #endregion
 
@@ -90,11 +99,6 @@ public interface IServiceWCF
 
     #endregion
 
-    #region
-
-    [OperationContract]
-    Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId);
-    #endregion
 
 
 

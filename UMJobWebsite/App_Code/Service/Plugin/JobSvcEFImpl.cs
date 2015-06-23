@@ -28,8 +28,7 @@ namespace UMJobWebsite.Service.Plugin
             JobBankContext db = new JobBankContext();
 
             try
-            {
-               
+            {               
                 return db.Jobs.SqlQuery("dbo.SelectJobById @JobId='" + obj.JobId.ToString() + "'").Single();
             }
             catch (Exception ex)
@@ -137,6 +136,104 @@ namespace UMJobWebsite.Service.Plugin
                 }
             }
         }
+
+        public Boolean addSkillToJob(Job obj, String skillId)
+        {
+            using (JobBankContext db = new JobBankContext())
+            {
+                try
+                {
+                    Job Job = db.Jobs.SqlQuery("dbo.SelectJobById @JobId='" + obj.JobId.ToString() + "'").Single();
+                    Skill skillAdd = db.Skills.SqlQuery("dbo.SelectSkillById @SkillId='" + skillId + "'").Single();
+
+                    if (Job != null)
+                    {
+                        if (skillAdd != null)
+                        {
+                            Job.Skills.Add(skillAdd);
+                        }
+
+                        #region Database Submission with Rollback
+
+                        try
+                        {
+                            db.SaveChanges();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            return false;
+                        }
+                        #endregion
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+        }
+
+        public Boolean removeSkillFromJob(Job obj, String skillId)
+        {
+            using (JobBankContext db = new JobBankContext())
+            {
+                try
+                {
+                    Job Job = db.Jobs.SqlQuery("dbo.SelectJobById @JobId='" + obj.JobId.ToString() + "'").Single();
+                    Skill skillRemove = db.Skills.SqlQuery("dbo.SelectSkillById @SkillId='" + skillId + "'").Single();
+
+                    if (Job != null)
+                    {
+                        if (skillRemove != null)
+                        {
+                            Job.Skills.Remove(skillRemove);
+                        }
+
+                        #region Database Submission with Rollback
+
+                        try
+                        {
+                            db.SaveChanges();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            return false;
+                        }
+                        #endregion
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+        }
+
+        public List<Job> selectJobBySkillId(String skillId)
+        {
+            JobBankContext db = new JobBankContext();
+
+            try
+            {
+                return db.Database.SqlQuery(typeof(Job), "dbo.SelectJobBySkillId @SkillId='" + skillId + "'").Cast<Job>().ToList();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
 
 
 

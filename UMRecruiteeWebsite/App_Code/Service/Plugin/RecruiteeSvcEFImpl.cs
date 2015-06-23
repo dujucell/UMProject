@@ -41,6 +41,21 @@ namespace UMRecruiteeWebsite.Service.Plugin
 
         }
 
+        public List<Recruitee> selectRecruiteeBySkillId(String skillId)
+        {
+            RecruiteeBankContext db = new RecruiteeBankContext();
+
+            try
+            {
+                return db.Database.SqlQuery(typeof(Recruitee), "dbo.SelectRecruiteeBySkillId @SkillId='" + skillId + "'").Cast<Recruitee>().ToList();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
         public Boolean insertRecruitee(Recruitee obj)
         {
             using (RecruiteeBankContext db = new RecruiteeBankContext())
@@ -136,23 +151,21 @@ namespace UMRecruiteeWebsite.Service.Plugin
             }
         }
 
-        public Boolean addSkillToRecruitee(Recruitee obj, Skill skill)
+
+        public Boolean addSkillToRecruitee(Recruitee obj, String skillId)
         {
-            obj.Skills.Add(skill);
             using (RecruiteeBankContext db = new RecruiteeBankContext())
             {
                 try
                 {
                     Recruitee recruitee = db.Recruitees.SqlQuery("dbo.SelectRecruiteeById @RecruiteeId='" + obj.RecruiteeId.ToString() + "'").Single();
+                    Skill skillAdd = db.Skills.SqlQuery("dbo.SelectSkillById @SkillId='" + skillId + "'").Single();
 
                     if (recruitee != null)
                     {
-                        if (obj.Skills != null)
+                        if (skillAdd != null)
                         {
-                            foreach (Skill ski in obj.Skills)
-                            {                                
-                                recruitee.Skills.Add(db.Skills.SqlQuery("dbo.SelectSkillById @SkillId='" + ski.SkillId.ToString() + "'").Single());
-                            }
+                            recruitee.Skills.Add(skillAdd);
                         }
 
                         #region Database Submission with Rollback
@@ -177,21 +190,52 @@ namespace UMRecruiteeWebsite.Service.Plugin
                 {
                     return false;
                 }
-            }            
+            }
         }
 
+        public Boolean removeSkillFromRecruitee(Recruitee obj, String skillId)
+        {
+            using (RecruiteeBankContext db = new RecruiteeBankContext())
+            {
+                try
+                {
+                    Recruitee recruitee = db.Recruitees.SqlQuery("dbo.SelectRecruiteeById @RecruiteeId='" + obj.RecruiteeId.ToString() + "'").Single();
+                    Skill skillRemove = db.Skills.SqlQuery("dbo.SelectSkillById @SkillId='" + skillId + "'").Single();
 
-        //public void addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
-        //{
-        //    RecruiteeManager rmgr = new RecruiteeManager();
-        //    SkillManager skmgr = new SkillManager();
-        //    Recruitee robj = Recruitee.createRecruitee(RecruiteeId, null);
-        //    Recruitee rec = rmgr.selectRecruiteeById(robj);
-        //    Skill sobj = Skill.createSkill(SkillId, null, null);
-        //    Skill ski = skmgr.selectSkillById(sobj);
-        //    rec.Skills.Add(ski);
-        //    rmgr.updateRecruitee(rec);
-        //}
+                    if (recruitee != null)
+                    {
+                        if (skillRemove != null)
+                        {
+                            recruitee.Skills.Remove(skillRemove);
+                        }
+
+                        #region Database Submission with Rollback
+
+                        try
+                        {
+                            db.SaveChanges();
+                            return true;
+                        }
+                        catch (Exception ex)
+                        {
+                            return false;
+                        }
+                        #endregion
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+        }   
+
+
+        
 
 
     }

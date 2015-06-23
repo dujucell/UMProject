@@ -78,5 +78,44 @@ namespace UMJobWebsite.Business
                 return false;
             }
         }
+
+        public Boolean addSkillToJob(Job obj, String skillId)
+        {
+            try
+            {
+                IJobSvc svc = (IJobSvc)this.getService(typeof(IJobSvc).Name);
+                return svc.addSkillToJob(obj, skillId);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public Boolean removeSkillFromJob(Job obj, String skillId)
+        {
+            try
+            {
+                IJobSvc svc = (IJobSvc)this.getService(typeof(IJobSvc).Name);
+                return svc.removeSkillFromJob(obj, skillId);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public List<Job> selectJobBySkillId(String skillId)
+        {
+            try
+            {
+                IJobSvc svc = (IJobSvc)this.getService(typeof(IJobSvc).Name);
+                return svc.selectJobBySkillId(skillId);
+            }
+            catch (ServiceLoadException ex)
+            {
+                return null;
+            }
+        }
     }
 }

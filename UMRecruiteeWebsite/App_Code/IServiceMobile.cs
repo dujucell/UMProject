@@ -37,6 +37,9 @@ public interface IServiceMobile
     RankingDto selectRankingById(String RankingId);
 
     [OperationContract]
+    List<RecruiteeDto> selectRecruiteeBySkillId(String skillId);
+
+    [OperationContract]
     Boolean insertRanking(String RankingId, String RankingName);
 
     [OperationContract]
@@ -47,6 +50,12 @@ public interface IServiceMobile
 
     [OperationContract]
     RankingDto createRankingDTO(String RankingId, String RankingName);
+
+    [OperationContract]
+    Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId);
+
+    [OperationContract]
+    Boolean removeSkillFromRecruitee(System.Guid RecruiteeId, String SkillId);
 
     #endregion
 
@@ -89,14 +98,6 @@ public interface IServiceMobile
     Boolean deleteSkill(String SkillId, String SkillName, String SkillDescription);
 
     #endregion
-
-    #region
-
-    [OperationContract]
-    Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId);
-
-    #endregion
-
 
 
 }

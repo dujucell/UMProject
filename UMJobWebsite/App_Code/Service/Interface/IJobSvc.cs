@@ -13,5 +13,9 @@ namespace UMJobWebsite.Service.Interface
         Boolean insertJob(Job obj);
         Boolean updateJob(Job obj);
         Boolean deleteJob(Job obj);
+        Boolean addSkillToJob(Job obj, String skillId);
+        Boolean removeSkillFromJob(Job obj, String skillId);
+        List<Job> selectJobBySkillId(String skillId);
+
     }
 }

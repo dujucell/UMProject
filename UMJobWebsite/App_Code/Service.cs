@@ -234,6 +234,38 @@ public class Service : IServiceWCF
         return JobDto.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
     }
 
+    public Boolean addSkillToJob(System.Guid JobId, String SkillId)
+    {
+        JobManager mgr = new JobManager();
+        Job job = new Job();
+        job.JobId = JobId;
+        Job obj = mgr.selectJobById(job);
+        return mgr.addSkillToJob(obj, SkillId);
+    }
+
+    public Boolean removeSkillFromJob(System.Guid JobId, String SkillId)
+    {
+        JobManager mgr = new JobManager();
+        Job job = new Job();
+        job.JobId = JobId;
+        Job obj = mgr.selectJobById(job);
+        return mgr.removeSkillFromJob(obj, SkillId);
+    }
+
+    public List<JobDto> selectJobBySkillId(String skillId)
+    {
+        JobManager mgr = new JobManager();
+        List<Job> jobList = mgr.selectJobBySkillId(skillId);
+        List<JobDto> dtoList = new List<JobDto>();
+
+        foreach (Job job in jobList)
+        {
+            dtoList.Add(JobDto.createJobDTO(job));
+        }
+
+        return dtoList;
+    }
+
     #endregion
 
     #region Skill

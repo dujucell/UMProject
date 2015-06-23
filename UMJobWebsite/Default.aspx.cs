@@ -34,7 +34,15 @@ public partial class _Default : System.Web.UI.Page
 
         //SkillManager mgr = new SkillManager();
         //List<Skill> list2 = mgr.selectAllSkill();
-        
+
+        ServiceMobile svc = new ServiceMobile();
+        //Boolean result = svc.addSkillToJob(new Guid("2A8606D9-83DB-43BD-BD6E-974A2130A5BF"), "SKI01");
+        //svc.addSkillToJob(new Guid("3395ACCF-73E8-4596-8A00-C36146E1C5F0"), "SKI01");
+        //svc.addSkillToJob(new Guid("3495ACCF-73E8-4596-8A00-C36146E1C5F0"), "SKI01");
+        //svc.addSkillToJob(new Guid("3495ACCF-73E8-4596-8A00-C36146E1C5F0"), "SKI02");
+
+        List<JobDto> list = svc.selectJobBySkillId("SKI02");
+
 
 
     }

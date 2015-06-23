@@ -161,6 +161,20 @@ public class Service : IServiceWCF
         }
     }
 
+    public List<RecruiteeDto> selectRecruiteeBySkillId(String skillId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        List<Recruitee> recList = mgr.selectRecruiteeBySkillId(skillId);
+        List<RecruiteeDto> dtoList = new List<RecruiteeDto>();
+
+        foreach (Recruitee rec in recList)
+        {
+            dtoList.Add(RecruiteeDto.createRecruiteeDTO(rec));
+        }
+
+        return dtoList;
+    }
+
     public Boolean insertRecruitee(RecruiteeDto dto)
     {
         Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId);
@@ -185,6 +199,22 @@ public class Service : IServiceWCF
     public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
     {
         return RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId);
+    }
+
+    public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null);
+        Recruitee obj = mgr.selectRecruiteeById(rec);
+        return mgr.addSkillToRecruitee(obj, SkillId);
+    }
+
+    public Boolean removeSkillFromRecruitee(System.Guid RecruiteeId, String SkillId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null);
+        Recruitee obj = mgr.selectRecruiteeById(rec);
+        return mgr.removeSkillFromRecruitee(obj, SkillId);
     }
 
     #endregion
@@ -245,21 +275,5 @@ public class Service : IServiceWCF
     
     #endregion
 
-    #region
-
-    public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
-    {
-        RecruiteeManager rmgr = new RecruiteeManager();
-        SkillManager skmgr = new SkillManager();
-
-        Recruitee robj = Recruitee.createRecruitee(RecruiteeId, null);
-        Recruitee rec = rmgr.selectRecruiteeById(robj);
-        Skill sobj = Skill.createSkill(SkillId, null, null);
-        Skill ski = skmgr.selectSkillById(sobj);
-
-        return rmgr.addSkillToRecruitee(rec, ski);
-    }
-
-    #endregion
    
 }

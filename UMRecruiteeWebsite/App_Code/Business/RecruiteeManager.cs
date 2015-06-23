@@ -37,6 +37,19 @@ namespace UMRecruiteeWebsite.Business
             }
         }
 
+        public List<Recruitee> selectRecruiteeBySkillId(String skillId)
+        {
+            try
+            {
+                IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
+                return svc.selectRecruiteeBySkillId(skillId);
+            }
+            catch (ServiceLoadException ex)
+            {
+                return null;
+            }
+        }
+
         public Boolean insertRecruitee(Recruitee obj)
         {
             try
@@ -78,12 +91,25 @@ namespace UMRecruiteeWebsite.Business
             }
         }
 
-        public Boolean addSkillToRecruitee(Recruitee obj, Skill skill)
+        public Boolean addSkillToRecruitee(Recruitee obj, String skillId)
         {
             try
             {
                 IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
-                return svc.addSkillToRecruitee(obj, skill);
+                return svc.addSkillToRecruitee(obj, skillId);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public Boolean removeSkillFromRecruitee(Recruitee obj, String skillId)
+        {
+            try
+            {
+                IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
+                return svc.removeSkillFromRecruitee(obj, skillId);
             }
             catch (Exception ex)
             {
