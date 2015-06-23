@@ -110,6 +110,28 @@ public class ServiceMobile : IServiceMobile
         return mgr.createRecruiteeDTO(RecruiteeId,RankingId);
     }
 
+    public List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        return mgr.selectRecruiteeBySkillId(SkillId);
+    }
+
+    public Boolean addSkillToRecruitee(String RecruiteeId, String SkillId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        RecruiteeDto obj = new RecruiteeDto();
+        obj.RecruiteeId = new Guid(RecruiteeId);
+        return mgr.addSkillToRecruitee(obj, SkillId);
+    }
+
+    public Boolean removeSkillFromRecruitee(String RecruiteeId, String SkillId)
+    {
+        RecruiteeManager mgr = new RecruiteeManager();
+        RecruiteeDto obj = new RecruiteeDto();
+        obj.RecruiteeId = new Guid(RecruiteeId);
+        return mgr.removeSkillFromRecruitee(obj, SkillId);
+    }
+
     #endregion
 
     #region Job
@@ -159,6 +181,28 @@ public class ServiceMobile : IServiceMobile
         return mgr.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
     }
 
+    public List<JobDto> selectJobBySkillId(String SkillId)
+    {
+        JobManager mgr = new JobManager();
+        return mgr.selectJobBySkillId(SkillId);
+    }
+
+    public Boolean addSkillToJob(String JobId, String SkillId)
+    {
+        JobManager mgr = new JobManager();
+        JobDto obj = new JobDto();
+        obj.JobId = new Guid(JobId);
+        return mgr.addSkillToJob(obj, SkillId);
+    }
+
+    public Boolean removeSkillFromJob(String JobId, String SkillId)
+    {
+        JobManager mgr = new JobManager();
+        JobDto obj = new JobDto();
+        obj.JobId = new Guid(JobId);
+        return mgr.removeSkillFromJob(obj, SkillId);
+    }
+
     #endregion
 
     #region SkillJob
@@ -166,7 +210,7 @@ public class ServiceMobile : IServiceMobile
     public List<JobService.SkillDto> selectAllSkillJob()
     {
         SkillJobManager mgr = new SkillJobManager();
-        return mgr.selectAllSkill();
+        return mgr.selectAllSkillJob();
     }
 
     public JobService.SkillDto selectSkillJobById(String SkillId)
@@ -241,15 +285,4 @@ public class ServiceMobile : IServiceMobile
     }
 
     #endregion
-
-    #region
-
-    public Boolean addSkillToRecruitee(String RecruiteeId, String SkillId)
-    {
-        RecruiteeManager mgr = new RecruiteeManager();
-        return mgr.addSkillToRecruitee(Guid.Parse(RecruiteeId), SkillId);   
-    }
-
-    #endregion
-
 }

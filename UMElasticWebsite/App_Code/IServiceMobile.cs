@@ -47,7 +47,15 @@ public interface IServiceMobile
 
     [OperationContract]
     RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
-    
+
+    [OperationContract]
+    List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId);
+
+    [OperationContract]
+    Boolean addSkillToRecruitee(String RecruiteeId, String SkillId);
+
+    [OperationContract]
+    Boolean removeSkillFromRecruitee(String RecruiteeId, String SkillId);    
 
     #endregion
 
@@ -73,7 +81,15 @@ public interface IServiceMobile
     [OperationContract]
      JobDto createJobDTO(System.Guid JobId, String JobName, String CompensationId, System.Guid EmployerId,
                        String JobDescription, int JobQuota, String JobExperienceLevel, decimal JobCompensationValue);
-    
+
+    [OperationContract]
+    List<JobDto> selectJobBySkillId(String SkillId);
+
+    [OperationContract]
+    Boolean addSkillToJob(String JobId, String SkillId);
+
+    [OperationContract]
+    Boolean removeSkillFromJob(String JobId, String SkillId);    
 
     #endregion
 
@@ -118,12 +134,6 @@ public interface IServiceMobile
     RankingDto createRankingDTO(String RankingId, String RankingName);
     #endregion
 
-    #region
-
-    [OperationContract]
-    Boolean addSkillToRecruitee(String RecruiteeId, String SkillId);
-
-    #endregion
 
 }
 

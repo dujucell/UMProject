@@ -110,12 +110,48 @@ namespace UMElasticWebsite.Service.Plugin
             
         }
 
-        public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
+        public List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId)
         {
-            using (RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient())
+            RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient();
+
+            try
             {
-                return svc.addSkillToRecruitee(RecruiteeId, SkillId);
+                return svc.selectRecruiteeBySkillId(SkillId).ToList<RecruiteeDto>();
             }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public Boolean addSkillToRecruitee(RecruiteeDto obj, String skillId)
+        {
+            RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient();
+
+            try
+            {
+                return svc.addSkillToRecruitee(obj.RecruiteeId, skillId);
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public Boolean removeSkillFromRecruitee(RecruiteeDto obj, String skillId)
+        {
+            RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient();
+
+            try
+            {
+                return svc.removeSkillFromRecruitee(obj.RecruiteeId, skillId);
+            }
+            catch
+            {
+                return false;
+            }
+
         }
     }
 }

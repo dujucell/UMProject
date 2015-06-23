@@ -109,5 +109,49 @@ namespace UMElasticWebsite.Service.Plugin
                 return svc.createJobDTO(JobId, JobName, CompensationId, EmployerId, JobDescription, JobQuota, JobExperienceLevel, JobCompensationValue);
             }
         }
+
+        public List<JobDto> selectJobBySkillId(String SkillId)
+        {
+            JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient();
+
+            try
+            {
+                return svc.selectJobBySkillId(SkillId).ToList<JobDto>();
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public Boolean addSkillToJob(JobDto obj, String skillId)
+        {
+            JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient();
+
+            try
+            {
+                return svc.addSkillToJob(obj.JobId, skillId);
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public Boolean removeSkillFromJob(JobDto obj, String skillId)
+        {
+            JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient();
+
+            try
+            {
+                return svc.removeSkillFromJob(obj.JobId, skillId);
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
     }
 }

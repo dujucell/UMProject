@@ -9,7 +9,7 @@ namespace UMElasticWebsite.Service.Interface
 {
     public interface ISkillJobSvc : IService
     {
-        List<SkillDto> selectAllSkill();
+        List<SkillDto> selectAllSkillJob();
         SkillDto selectSkillById(SkillDto obj);
         Boolean insertSkill(SkillDto obj);
         Boolean updateSkill(SkillDto obj);

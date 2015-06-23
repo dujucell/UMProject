@@ -9,13 +9,14 @@ namespace UMElasticWebsite.Service.Plugin
 {
     public class SkillJobSvcWSImpl : ISkillJobSvc
     {
-       public List<SkillDto> selectAllSkill()
+       public List<SkillDto> selectAllSkillJob()
         {
             JobService.ServiceWCFClient svc = new JobService.ServiceWCFClient();
 
             try
             {
-                return svc.selectAllSkill().ToList<SkillDto>();
+                List<SkillDto> list = svc.selectAllSkill().ToList<SkillDto>();
+                return list;
             } 
             catch (Exception ex)
             {

@@ -91,12 +91,39 @@ namespace UMElasticWebsite.Business
             }
         }
 
-        public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String RankingId)
+        public List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId)
         {
             try
             {
                 IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
-                return svc.addSkillToRecruitee(RecruiteeId, RankingId);
+                List<RecruiteeDto> list = svc.selectRecruiteeBySkillId(SkillId);
+                return list;
+            }
+            catch (ServiceLoadException ex)
+            {
+                return null;
+            }
+        }
+
+        public Boolean addSkillToRecruitee(RecruiteeDto obj, String SkillId)
+        {
+            try
+            {
+                IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
+                return svc.addSkillToRecruitee(obj, SkillId);
+            }
+            catch (ServiceLoadException ex)
+            {
+                return false;
+            }
+        }
+
+        public Boolean removeSkillFromRecruitee(RecruiteeDto obj, String SkillId)
+        {
+            try
+            {
+                IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
+                return svc.removeSkillFromRecruitee(obj, SkillId);
             }
             catch (ServiceLoadException ex)
             {

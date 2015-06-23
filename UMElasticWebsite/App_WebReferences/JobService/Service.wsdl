@@ -133,6 +133,24 @@
   <wsdl:message name="IServiceWCF_createJobDTO_OutputMessage">
     <wsdl:part name="parameters" element="tns:createJobDTOResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceWCF_addSkillToJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:addSkillToJob" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_addSkillToJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addSkillToJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_removeSkillFromJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeSkillFromJob" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_removeSkillFromJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeSkillFromJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_selectJobBySkillId_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectJobBySkillId" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_selectJobBySkillId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectJobBySkillIdResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceWCF_selectAllSkill_InputMessage">
     <wsdl:part name="parameters" element="tns:selectAllSkill" />
   </wsdl:message>
@@ -247,6 +265,18 @@
     <wsdl:operation name="createJobDTO">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/createJobDTO" message="tns:IServiceWCF_createJobDTO_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/createJobDTOResponse" message="tns:IServiceWCF_createJobDTO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addSkillToJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/addSkillToJob" message="tns:IServiceWCF_addSkillToJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/addSkillToJobResponse" message="tns:IServiceWCF_addSkillToJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeSkillFromJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/removeSkillFromJob" message="tns:IServiceWCF_removeSkillFromJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/removeSkillFromJobResponse" message="tns:IServiceWCF_removeSkillFromJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectJobBySkillId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/selectJobBySkillId" message="tns:IServiceWCF_selectJobBySkillId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/selectJobBySkillIdResponse" message="tns:IServiceWCF_selectJobBySkillId_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="selectAllSkill">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/selectAllSkill" message="tns:IServiceWCF_selectAllSkill_InputMessage" />
@@ -453,6 +483,33 @@
     </wsdl:operation>
     <wsdl:operation name="createJobDTO">
       <soap:operation soapAction="http://tempuri.org/IServiceWCF/createJobDTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addSkillToJob">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/addSkillToJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeSkillFromJob">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/removeSkillFromJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectJobBySkillId">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/selectJobBySkillId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

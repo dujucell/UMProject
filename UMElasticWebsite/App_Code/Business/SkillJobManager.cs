@@ -11,12 +11,12 @@ namespace UMElasticWebsite.Business
     public class SkillJobManager : BusinessManager
     {
 
-        public List<SkillDto> selectAllSkill()
+        public List<SkillDto> selectAllSkillJob()
         {
             try
             {
                 ISkillJobSvc svc = (ISkillJobSvc)this.getService(typeof(ISkillJobSvc).Name);
-                return svc.selectAllSkill();
+                return svc.selectAllSkillJob();
             }
             catch (ServiceLoadException ex)
             {

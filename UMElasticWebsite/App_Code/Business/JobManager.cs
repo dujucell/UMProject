@@ -92,6 +92,46 @@ namespace UMElasticWebsite.Business
                 return null;
             }
         }
+
+        public List<JobDto> selectJobBySkillId(String SkillId)
+        {
+            try
+            {
+                IJobSvc svc = (IJobSvc)this.getService(typeof(IJobSvc).Name);
+                List<JobDto> list = svc.selectJobBySkillId(SkillId);
+                return list;
+            }
+            catch (ServiceLoadException ex)
+            {
+                return null;
+            }
+        }
+
+        public Boolean addSkillToJob(JobDto obj, String SkillId)
+        {
+            try
+            {
+                IJobSvc svc = (IJobSvc)this.getService(typeof(IJobSvc).Name);
+                return svc.addSkillToJob(obj, SkillId);
+            }
+            catch (ServiceLoadException ex)
+            {
+                return false;
+            }
+        }
+
+        public Boolean removeSkillFromJob(JobDto obj, String SkillId)
+        {
+            try
+            {
+                IJobSvc svc = (IJobSvc)this.getService(typeof(IJobSvc).Name);
+                return svc.removeSkillFromJob(obj, SkillId);
+            }
+            catch (ServiceLoadException ex)
+            {
+                return false;
+            }
+        }
     }
        
 }
