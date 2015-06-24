@@ -60,7 +60,7 @@ public partial class _Default : System.Web.UI.Page
         // SkillRecruiteeManager mgr = new SkillRecruiteeManager();
         // List<RecruiteeService.SkillDto> list = mgr.selectAllSkill();
 
-        ServiceMobile svc = new ServiceMobile();
+        //ServiceMobile svc = new ServiceMobile();
         //List<JobDto> list = svc.selectJobBySkillId("SKI01");
 
         //List<JobDto> list2 = svc.selectAllJob();
@@ -71,14 +71,14 @@ public partial class _Default : System.Web.UI.Page
         //Boolean result = svc.addSkillToJob(job.JobId.ToString(), "SKI01");
         //Boolean result2 = svc.removeSkillFromJob(job.JobId.ToString(), "SKI01");
 
-        List<RecruiteeService.SkillDto> list_skillrecruitee = svc.selectAllSkillRecruitee();
+        //List<RecruiteeService.SkillDto> list_skillrecruitee = svc.selectAllSkillRecruitee();
 
-        List<RecruiteeDto> list = svc.selectAllRecruitee();
+        //List<RecruiteeDto> list = svc.selectAllRecruitee();
 
-        svc.addSkillToRecruitee("1f21a767-6537-4aab-955b-14eb54e14b83", "SKI03");
-       // svc.removeSkillFromRecruitee("1f21a767-6537-4aab-955b-14eb54e14b83", "SKI03");
+        //svc.addSkillToRecruitee("1f21a767-6537-4aab-955b-14eb54e14b83", "SKI03");
+        // svc.removeSkillFromRecruitee("1f21a767-6537-4aab-955b-14eb54e14b83", "SKI03");
 
-        RecruiteeDto obj = svc.selectRecruiteeBySkillId("SKI03").Last();
+        //RecruiteeDto obj = svc.selectRecruiteeBySkillId("SKI03").Last();
        
     }
 }
