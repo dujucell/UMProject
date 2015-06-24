@@ -111,7 +111,7 @@ public interface IServiceWCF
     List<RecruiteeService.SkillDto> selectAllSkillRecruitee();
 
     [OperationContract]
-    RecruiteeService.SkillDto selectSKillRecruiteeById(RecruiteeService.SkillDto obj);
+    RecruiteeService.SkillDto selectSkillRecruiteeById(RecruiteeService.SkillDto obj);
 
     #endregion
 

@@ -109,7 +109,7 @@ public interface IServiceMobile
     List<RecruiteeService.SkillDto> selectAllSkillRecruitee();
 
     [OperationContract]
-    RecruiteeService.SkillDto selectSKillRecruiteeById(String SkillId);
+    RecruiteeService.SkillDto selectSkillRecruiteeById(String SkillId);
 
     #endregion
 

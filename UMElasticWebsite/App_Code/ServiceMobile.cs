@@ -231,7 +231,7 @@ public class ServiceMobile : IServiceMobile
         return mgr.selectAllSkill();
     }
 
-    public RecruiteeService.SkillDto selectSKillRecruiteeById(String SkillId)
+    public RecruiteeService.SkillDto selectSkillRecruiteeById(String SkillId)
     {
         SkillRecruiteeManager mgr = new SkillRecruiteeManager();
         RecruiteeService.SkillDto obj = new RecruiteeService.SkillDto();

@@ -219,7 +219,7 @@ public class Service : IServiceWCF
         return mgr.selectAllSkill();
     }
 
-    public RecruiteeService.SkillDto selectSKillRecruiteeById(RecruiteeService.SkillDto obj)
+    public RecruiteeService.SkillDto selectSkillRecruiteeById(RecruiteeService.SkillDto obj)
     {
         SkillRecruiteeManager mgr = new SkillRecruiteeManager();
         return mgr.selectSkillById(obj);
