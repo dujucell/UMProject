@@ -177,6 +177,10 @@ public class Service : IServiceWCF
 
     public Boolean insertRecruitee(RecruiteeDto dto)
     {
+        if (dto.RankingId.Equals(""))
+        {
+            dto.RankingId = null;
+        }
         Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.insertRecruitee(obj);

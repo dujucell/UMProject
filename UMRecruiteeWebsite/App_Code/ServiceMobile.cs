@@ -177,6 +177,10 @@ public class ServiceMobile : IServiceMobile
 
     public Boolean insertRecruitee(System.Guid RecruiteeId, String RankingId)
     {
+        if (RankingId.Equals(""))
+        {
+            RankingId = null;
+        }
         Recruitee obj = Recruitee.createRecruitee(RecruiteeId, RankingId);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.insertRecruitee(obj);
