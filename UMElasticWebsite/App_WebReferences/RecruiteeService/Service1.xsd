@@ -37,6 +37,7 @@
   <xs:complexType name="RecruiteeDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="RankingId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RankingValue" type="xs:double" />
       <xs:element minOccurs="0" name="RecruiteeId" type="ser:guid" />
     </xs:sequence>
   </xs:complexType>

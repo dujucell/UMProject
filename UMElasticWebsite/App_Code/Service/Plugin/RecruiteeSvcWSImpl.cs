@@ -101,11 +101,11 @@ namespace UMElasticWebsite.Service.Plugin
             }
         }
 
-        public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+        public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue)
         {
             using (RecruiteeService.ServiceWCFClient svc = new RecruiteeService.ServiceWCFClient())
             {
-                return svc.createRecruiteeDTO(RecruiteeId, RankingId);
+                return svc.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
             }
             
         }

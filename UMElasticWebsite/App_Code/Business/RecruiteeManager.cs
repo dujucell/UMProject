@@ -78,12 +78,12 @@ namespace UMElasticWebsite.Business
             }
         }
 
-        public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+        public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue)
         {
             try
             {
                 IRecruiteeSvc svc = (IRecruiteeSvc)this.getService(typeof(IRecruiteeSvc).Name);
-                return svc.createRecruiteeDTO(RecruiteeId, RankingId);
+                return svc.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
             }
             catch (ServiceLoadException ex)
             {

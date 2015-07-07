@@ -84,30 +84,31 @@ public class ServiceMobile : IServiceMobile
         return mgr.selectRecruiteeById(obj);
     }
 
-    public Boolean insertRecruitee(System.Guid RecruiteeId, String RankingId)
+    public Boolean insertRecruitee(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId);
+        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
         return mgr.insertRecruitee(obj);
     }
 
-    public Boolean updateRecruitee(System.Guid RecruiteeId, String RankingId)
+    public Boolean updateRecruitee(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId);
+        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
         return mgr.updateRecruitee(obj);
     }
 
-    public Boolean deleteRecruitee(System.Guid RecruiteeId, String RankingId)
+    public Boolean deleteRecruitee(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId);
+        RecruiteeDto obj = mgr.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
         return mgr.deleteRecruitee(obj);
     }
 
-    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId) {
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue)
+    {
         RecruiteeManager mgr = new RecruiteeManager();
-        return mgr.createRecruiteeDTO(RecruiteeId,RankingId);
+        return mgr.createRecruiteeDTO(RecruiteeId,RankingId, RankingValue);
     }
 
     public List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId)

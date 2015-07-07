@@ -49,7 +49,7 @@ public interface IServiceWCF
     Boolean deleteRecruitee(RecruiteeDto obj);
 
     [OperationContract]
-    RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+    RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue);
     
     [OperationContract]
     List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId);

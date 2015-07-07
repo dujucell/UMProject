@@ -101,10 +101,10 @@ public class Service : IServiceWCF
         return mgr.deleteRecruitee(dto);
     }
 
-    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        return mgr.createRecruiteeDTO(RecruiteeId, RankingId);
+        return mgr.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
     }
 
     public List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId)

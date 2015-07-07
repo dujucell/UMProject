@@ -14,7 +14,7 @@ namespace UMElasticWebsite.Service.Interface
         Boolean insertRecruitee(RecruiteeDto obj);
         Boolean updateRecruitee(RecruiteeDto obj);
         Boolean deleteRecruitee(RecruiteeDto obj);
-        RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+        RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue);
         List<RecruiteeDto> selectRecruiteeBySkillId(String SkillId);
         Boolean addSkillToRecruitee(RecruiteeDto obj, String SkillId);
         Boolean removeSkillFromRecruitee(RecruiteeDto obj, String skillId);

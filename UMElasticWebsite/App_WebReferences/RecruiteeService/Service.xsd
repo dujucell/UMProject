@@ -240,6 +240,7 @@
       <xs:sequence>
         <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="RecruiteeId" type="q21:guid" />
         <xs:element minOccurs="0" name="RankingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RankingValue" type="xs:double" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
