@@ -19,16 +19,17 @@ namespace UMRecruiteeWebsite.Models.Mapping
             this.ToTable("Recruitee");
             this.Property(t => t.RecruiteeId).HasColumnName("RecruiteeId");
             this.Property(t => t.RankingId).HasColumnName("RankingId");
+            this.Property(t => t.RankingValue).HasColumnName("RankingValue");
 
             // Relationships
             this.HasMany(t => t.Skills)
                 .WithMany(t => t.Recruitees)
                 .Map(m =>
-                    {
-                        m.ToTable("RecruiteeSkill");
-                        m.MapLeftKey("RecruiteeId");
-                        m.MapRightKey("SkillId");
-                    });
+                {
+                    m.ToTable("RecruiteeSkill");
+                    m.MapLeftKey("RecruiteeId");
+                    m.MapRightKey("SkillId");
+                });
 
             this.HasOptional(t => t.Ranking)
                 .WithMany(t => t.Recruitees)

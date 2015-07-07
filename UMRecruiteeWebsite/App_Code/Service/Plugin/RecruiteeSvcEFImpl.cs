@@ -86,6 +86,7 @@ namespace UMRecruiteeWebsite.Service.Plugin
                     if (recruitee != null)
                     {
                         recruitee.RankingId = obj.RankingId;
+                        recruitee.RankingValue = obj.RankingValue;
 
                         #region Database Submission with Rollback
 

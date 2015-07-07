@@ -71,7 +71,7 @@ public interface IServiceWCF
     Boolean deleteRecruitee(RecruiteeDto obj);
 
     [OperationContract]
-    RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId);
+    RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue);
 
     [OperationContract]
     Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId);

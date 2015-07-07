@@ -13,15 +13,17 @@ namespace UMRecruiteeWebsite.Models
 
         public System.Guid RecruiteeId { get; set; }
         public string RankingId { get; set; }
+        public Nullable<decimal> RankingValue { get; set; }
         public virtual Ranking Ranking { get; set; }
         public virtual ICollection<Category> Categories { get; set; }
         public virtual ICollection<Skill> Skills { get; set; }
 
-        public static Recruitee createRecruitee(System.Guid RecruiteeId, String RankingId)
+        public static Recruitee createRecruitee(System.Guid RecruiteeId, String RankingId, decimal? RankingValue)
         {
             Recruitee obj = new Recruitee();
             obj.RecruiteeId = RecruiteeId;
             obj.RankingId = RankingId;
+            obj.RankingValue = RankingValue;
             return obj;
         }
     }

@@ -175,40 +175,40 @@ public class ServiceMobile : IServiceMobile
         return dtoList;
     }
 
-    public Boolean insertRecruitee(System.Guid RecruiteeId, String RankingId)
+    public Boolean insertRecruitee(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
         if (RankingId.Equals(""))
         {
             RankingId = null;
         }
-        Recruitee obj = Recruitee.createRecruitee(RecruiteeId, RankingId);
+        Recruitee obj = Recruitee.createRecruitee(RecruiteeId, RankingId, (decimal)RankingValue);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.insertRecruitee(obj);
     }
 
-    public Boolean updateRecruitee(System.Guid RecruiteeId, String RankingId)
+    public Boolean updateRecruitee(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
-        Recruitee obj = Recruitee.createRecruitee(RecruiteeId, RankingId);
+        Recruitee obj = Recruitee.createRecruitee(RecruiteeId, RankingId, (decimal)RankingValue);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.updateRecruitee(obj);
     }
 
-    public Boolean deleteRecruitee(System.Guid RecruiteeId, String RankingId)
+    public Boolean deleteRecruitee(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
-        Recruitee obj = Recruitee.createRecruitee(RecruiteeId, RankingId);
+        Recruitee obj = Recruitee.createRecruitee(RecruiteeId, RankingId, (decimal)RankingValue);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.deleteRecruitee(obj);
     }
 
-    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
-        return RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId);
+        return RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
     }
 
     public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null);
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, null);
         Recruitee obj = mgr.selectRecruiteeById(rec);
         return mgr.addSkillToRecruitee(obj, SkillId);
     }
@@ -216,7 +216,7 @@ public class ServiceMobile : IServiceMobile
     public Boolean removeSkillFromRecruitee(System.Guid RecruiteeId, String SkillId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null);
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, null);
         Recruitee obj = mgr.selectRecruiteeById(rec);
         return mgr.removeSkillFromRecruitee(obj, SkillId);
     }

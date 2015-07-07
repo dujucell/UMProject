@@ -181,34 +181,34 @@ public class Service : IServiceWCF
         {
             dto.RankingId = null;
         }
-        Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId);
+        Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId, (decimal)dto.RankingValue);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.insertRecruitee(obj);
     }
 
     public Boolean updateRecruitee(RecruiteeDto dto)
     {
-        Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId);
+        Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId, (decimal)dto.RankingValue);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.updateRecruitee(obj);
     }
 
     public Boolean deleteRecruitee(RecruiteeDto dto)
     {
-        Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId);
+        Recruitee obj = Recruitee.createRecruitee(dto.RecruiteeId, dto.RankingId, (decimal)dto.RankingValue);
         RecruiteeManager mgr = new RecruiteeManager();
         return mgr.deleteRecruitee(obj);
     }
 
-    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId)
+    public RecruiteeDto createRecruiteeDTO(System.Guid RecruiteeId, String RankingId, double RankingValue)
     {
-        return RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId);
+        return RecruiteeDto.createRecruiteeDTO(RecruiteeId, RankingId, RankingValue);
     }
 
     public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null);
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, null);
         Recruitee obj = mgr.selectRecruiteeById(rec);
         return mgr.addSkillToRecruitee(obj, SkillId);
     }
@@ -216,7 +216,7 @@ public class Service : IServiceWCF
     public Boolean removeSkillFromRecruitee(System.Guid RecruiteeId, String SkillId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null);
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, null);
         Recruitee obj = mgr.selectRecruiteeById(rec);
         return mgr.removeSkillFromRecruitee(obj, SkillId);
     }
