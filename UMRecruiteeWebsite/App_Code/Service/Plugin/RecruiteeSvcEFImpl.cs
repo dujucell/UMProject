@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -72,7 +73,7 @@ namespace UMRecruiteeWebsite.Service.Plugin
                 }
 
             }
-        }
+        } 
 
         public Boolean updateRecruitee(Recruitee obj)
         {
@@ -87,6 +88,7 @@ namespace UMRecruiteeWebsite.Service.Plugin
                     {
                         recruitee.RankingId = obj.RankingId;
                         recruitee.RankingValue = obj.RankingValue;
+
 
                         #region Database Submission with Rollback
 
@@ -234,10 +236,5 @@ namespace UMRecruiteeWebsite.Service.Plugin
                 }
             }
         }   
-
-
-        
-
-
     }
 }

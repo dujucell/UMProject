@@ -208,7 +208,7 @@ public class Service : IServiceWCF
     public Boolean addSkillToRecruitee(System.Guid RecruiteeId, String SkillId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, null);
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, 0);
         Recruitee obj = mgr.selectRecruiteeById(rec);
         return mgr.addSkillToRecruitee(obj, SkillId);
     }
@@ -216,7 +216,7 @@ public class Service : IServiceWCF
     public Boolean removeSkillFromRecruitee(System.Guid RecruiteeId, String SkillId)
     {
         RecruiteeManager mgr = new RecruiteeManager();
-        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, null);
+        Recruitee rec = Recruitee.createRecruitee(RecruiteeId, null, 0);
         Recruitee obj = mgr.selectRecruiteeById(rec);
         return mgr.removeSkillFromRecruitee(obj, SkillId);
     }
